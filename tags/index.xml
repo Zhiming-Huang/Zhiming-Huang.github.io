@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>https://zhiming-huang.github.io/tags/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhiming-huang.github.io/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Demo</title>
       <link>https://zhiming-huang.github.io/tags/demo/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
@@ -44,6 +35,15 @@
       <pubDate>Wed, 20 Apr 2016 12:00:00 +0000</pubDate>
       
       <guid>https://zhiming-huang.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Information Fusion</title>
+      <link>https://zhiming-huang.github.io/tags/information-fusion/</link>
+      <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhiming-huang.github.io/tags/information-fusion/</guid>
       <description></description>
     </item>
     
