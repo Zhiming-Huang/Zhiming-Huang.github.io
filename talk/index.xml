@@ -16,7 +16,9 @@
       <pubDate>Thu, 21 Sep 2017 10:00:00 +0000</pubDate>
       
       <guid>https://zhiming-huang.github.io/talk/example-talk/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+      <description>&lt;script async class=&#39;speakerdeck-embed&#39; data-id=&#39;c7779e76c27142b9b44f88e63b06b204&#39; data-ratio=&#39;1.33333333333333&#39; src=&#39;//speakerdeck.com/assets/embed.js&#39;&gt;&lt;/script&gt;
+
+&lt;p&gt;You can click &lt;a href=&#34;slides/ClusteringMPCchannel.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to download the Slides.&lt;/p&gt;
 </description>
     </item>
     
