@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.26" />
+  <meta name="generator" content="Hugo 0.30.2" />
   <meta name="author" content="Zhiming Huang">
   <meta name="description" content="Undergraduate of Communication Engineering">
 
+  
   
   
   
@@ -22,8 +23,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
   
   
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
-  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+
+  
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
   
 
   
@@ -41,13 +48,26 @@
     
   
 
+  
   <link rel="alternate" href="https://zhiming-huang.github.io/publication/index.xml" type="application/rss+xml" title="Zhiming&#39;s Page">
   <link rel="feed" href="https://zhiming-huang.github.io/publication/index.xml" type="application/rss+xml" title="Zhiming&#39;s Page">
+  
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
   <link rel="canonical" href="https://zhiming-huang.github.io/publication/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Zhiming&#39;s Page">
+  <meta property="og:url" content="https://zhiming-huang.github.io/publication/">
+  <meta property="og:title" content="Publications | Zhiming&#39;s Page">
+  <meta property="og:description" content="Undergraduate of Communication Engineering">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="og:updated_time" content="2017-01-01T00:00:00&#43;00:00">
+  
 
   
 
@@ -61,6 +81,7 @@
 
     
     <div class="navbar-header">
+      
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
               data-target=".navbar-collapse" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -68,6 +89,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      
       <a class="navbar-brand" href="/">Zhiming&#39;s Page</a>
     </div>
 
@@ -93,9 +115,9 @@
         
 
         <li class="nav-item">
-          <a href="/#publications_selected">
+          <a href="/#publications">
             
-            <span>Publications</span>
+            <span>Papers</span>
           </a>
         </li>
 
@@ -168,13 +190,57 @@
 
       
 
+      
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+
       <p>
         Filter by type:
-        <select class="pub-filters-select">
+
+        <select class="pub-filters pubtype-select" data-filter-group="pubtype">
           <option value="*">All</option>
           
           <option value=".pubtype-2">
             Journal
+          </option>
+          
+          <option value=".pubtype-3">
+            Work in progress
+          </option>
+          
+          <option value=".pubtype-4">
+            Technical report
+          </option>
+          
+        </select>
+
+        <select class="pub-filters" data-filter-group="year">
+          <option value="*">All</option>
+          
+          
+          <option value=".year-2017">
+            2017
+          </option>
+          
+          <option value=".year-2016">
+            2016
           </option>
           
         </select>
@@ -187,29 +253,47 @@
           
         
 
-        <div class="grid-sizer col-md-12 isotope-item pubtype-2">
-          <i class="fa fa-file-text-o" aria-hidden="true"
-             style="color:#03396c;font-size:80%;padding-top:6px; padding-right: 10px;"></i>A new method to evaluate risk in failure mode and effects analysis under fuzzy information
-          <p>
+        <div class="grid-sizer col-md-12 isotope-item pubtype-3 year-2017">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <a href="https://zhiming-huang.github.io/publication/fusionmpcs/" itemprop="name">Clustering Multipath Components Based on multi-snapshots fusion</a>
+  <div itemprop="author">
+    Zhiming Huang, Jianping Pan, Ruonan Zhang</div>
+  <p>
 
 
 
-<a class="btn btn-primary btn-outline btn-xs" href="https://zhiming-huang.github.io/publication/fuzzyfmea/">
-  Details
+
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/Zhiming-Huang/FCM-MPCs-Fusion" target="_blank" rel="noopener">
+  Code
 </a>
 
 
-<a class="btn btn-primary btn-outline btn-xs" href="https://link.springer.com/content/pdf/10.1007%2Fs00500-017-2664-x.pdf">
-  PDF
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="/project/clustermpcs/">
+  Project
 </a>
 
 
 
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://zhiming-huang.github.io/slides/ClusteringMPCchannel.pdf" target="_blank" rel="noopener">
+  Slides
+</a>
 
 
 
 
 </p>
+</div>
+
+          
         </div>
 
         
@@ -218,37 +302,227 @@
           
         
 
-        <div class="grid-sizer col-md-12 isotope-item pubtype-2">
-          <i class="fa fa-file-text-o" aria-hidden="true"
-             style="color:#03396c;font-size:80%;padding-top:6px; padding-right: 10px;"></i>Uncertainty measurement with belief entropy on interference effect in Quantum-Like Bayesian Networks
-          <p>
+        <div class="grid-sizer col-md-12 isotope-item pubtype-3 year-2017">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <a href="https://zhiming-huang.github.io/publication/clustermpcs/" itemprop="name">Modified Fuzzy C-means Algorithm for Clustering Multipath Components in Radio Channel Modeling</a>
+  <div itemprop="author">
+    Zhiming Huang, Jianping Pan, Ruonan Zhang</div>
+  <p>
 
 
 
-<a class="btn btn-primary btn-outline btn-xs" href="https://zhiming-huang.github.io/publication/person-re-identification/">
-  Details
-</a>
 
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/1709.02844.pdf">
+<a class="btn btn-primary btn-outline btn-xs" href="https://zhiming-huang.github.io/PDF/modify_FCM_MPCs.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
 
-<a class="btn btn-primary btn-outline btn-xs" href="https://zhiming-huang.github.io/slides/QuantumBayes.pdf">
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://github.com/Zhiming-Huang/Power-FCM-MPCs-Cluster" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="/project/clustermpcs/">
+  Project
+</a>
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://zhiming-huang.github.io/slides/ClusteringMPCchannel.pdf" target="_blank" rel="noopener">
   Slides
 </a>
 
 
 
 
+</p>
+</div>
 
-<a class="btn btn-primary btn-outline btn-xs" href="https://zhiming-huang.github.io/project/deep-learning/">
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-md-12 isotope-item pubtype-2 year-2017">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <a href="https://zhiming-huang.github.io/publication/quantumbeyesian/" itemprop="name">Uncertainty measurement with belief entropy on interference effect in Quantum-Like Bayesian Networks</a>
+  <div itemprop="author">
+    Zhiming Huang, Lin Yang, Wen Jiang</div>
+  <p>
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/1709.02844.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="/project/intelliinfoproc/">
   Project
 </a>
 
 
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://zhiming-huang.github.io/slides/QuantumBayes.pdf" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+
 </p>
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-md-12 isotope-item pubtype-2 year-2017">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <a href="https://zhiming-huang.github.io/publication/fuzzyfmea/" itemprop="name">A new method to evaluate risk in failure mode and effects analysis under fuzzy information</a>
+  <div itemprop="author">
+    Zhiming Huang, Wen Jiang, Yongchuan Tang</div>
+  <p>
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://link.springer.com/content/pdf/10.1007%2Fs00500-017-2664-x.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="/project/intelliinfoproc/">
+  Project
+</a>
+
+
+
+
+
+
+
+</p>
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-md-12 isotope-item pubtype-4 year-2017">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <a href="https://zhiming-huang.github.io/publication/queueairport/" itemprop="name">A Queuing Network Model For Airport Security Chenck Point </a>
+  <div itemprop="author">
+    Zhiming Huang, Yubei Lv, Zhenchao Guo</div>
+  <p>
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://zhiming-huang.github.io/PDF/icm2017.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+</div>
+
+          
+        </div>
+
+        
+
+        
+          
+        
+
+        <div class="grid-sizer col-md-12 isotope-item pubtype-4 year-2016">
+          
+            <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
+  <i class="fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+  <a href="https://zhiming-huang.github.io/publication/waterresource/" itemprop="name">A System Dynastic Model For Water Resources Analysis</a>
+  <div itemprop="author">
+    Zhiming Huang, Zichang He, Yubo Huang</div>
+  <p>
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://zhiming-huang.github.io/PDF/icm2016.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+</div>
+
+          
         </div>
 
         
@@ -263,8 +537,9 @@
 
       &copy; 2017 Zhiming Huang &middot; 
 
-      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
-      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
 
       <span class="pull-right" aria-hidden="true">
         <a href="#" id="back_to_top">
@@ -278,13 +553,45 @@
   </div>
 </footer>
 
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+
+    
+    
+    <script id="dsq-count-scr" src="//zhiming.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
     
     <script src="/js/hugo-academic.js"></script>
     

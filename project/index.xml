@@ -11,30 +11,51 @@
     <atom:link href="/project/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Information Fusion</title>
-      <link>https://zhiming-huang.github.io/project/deep-learning/</link>
+      <title>Clustering Multipath Components in Radio Channel Modelling</title>
+      <link>https://zhiming-huang.github.io/project/clustermpcs/</link>
       <pubDate>Wed, 21 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://zhiming-huang.github.io/project/deep-learning/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+      <guid>https://zhiming-huang.github.io/project/clustermpcs/</guid>
+      <description>&lt;p&gt;The project is maintained by &lt;a href=&#34;http://panlab.cs.uvic.ca/&#34; target=&#34;_blank&#34;&gt;PanLab&lt;/a&gt; at University of Victoria, Canada, supervised by &lt;a href=&#34;http://webhome.cs.uvic.ca/~pan/&#34; target=&#34;_blank&#34;&gt;Prof.Jianping Pan&lt;/a&gt; and &lt;a href=&#34;http://teacher.nwpu.edu.cn/rzhang&#34; target=&#34;_blank&#34;&gt;Prof.Ruonan Zhang&lt;/a&gt;. The research mainly on clustering multipath components in radio channel by applying methods from machine learning.&lt;/p&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;I had a 3-months research internship in Panlab, where I focus my work on how to improve the clustering performance of multipath components(MPCs) in radio channel. My first work is a modification to an existing clusering methods called Fuzzy C-means algorithm to enable it to fit in clustering MPCs situation. In this &lt;a href=&#34;https://zhiming-huang.github.io/publication/clustermpcs/&#34;&gt;work&lt;/a&gt;, I introduced a mapping function to make FCM compatible with MPCs situation.&lt;/p&gt;
 
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;p&gt;Based on the modified FCM, I proposed a fusion technique to combine multiple snapshots to obtain a low-noise output. The framework and comparison results are in the &lt;a href=&#34;https://zhiming-huang.github.io/talk/interntalk/&#34;&gt;talk slides&lt;/a&gt;. I gained a lot through this internship and further build up my interests in research work.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>External Project</title>
-      <link>https://zhiming-huang.github.io/project/example-external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Long-range WIFI communication for solar-powered Unmanned air vehicle</title>
+      <link>https://zhiming-huang.github.io/project/longrangewifi/</link>
+      <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://zhiming-huang.github.io/project/example-external-project/</guid>
-      <description></description>
+      <guid>https://zhiming-huang.github.io/project/longrangewifi/</guid>
+      <description>&lt;p&gt;The project is maintained by wireless communication Lab at Northwestern Polytechnical University, supervised by &lt;a href=&#34;http://teacher.nwpu.edu.cn/rzhang&#34; target=&#34;_blank&#34;&gt;Prof.Ruonan Zhang&lt;/a&gt; and &lt;a href=&#34;http://teacher.nwpu.edu.cn/2014010059.html&#34; target=&#34;_blank&#34;&gt;Prof.Bin Li&lt;/a&gt;. The project focuses on improving the communication distane between a Base Station (BS) on the ground and a Mobile Station(MS) on a Unmanned Aircraft Vehicle (UAV).&lt;/p&gt;
+
+&lt;p&gt;I joined this team in 2016.3. My job is to Conducted field experiment, Established and monitored the communication systems. The figure below shows the system we paid attention to.
+&lt;img src=&#34;https://zhiming-huang.github.io/img/123.png&#34; alt=&#34;Alt text&#34; title=&#34;system model&#34; /&gt;
+The Internet provider links to UAV, who provides Internet access to the ground users whom it covers.&lt;/p&gt;
+
+&lt;p&gt;The improvement strategies are mainly for two parts. First is the communicaion protocals and the second is the antenna and tx powers. The team are now developing communication system based on Openwrt. I&amp;rsquo;ve done some prepare research on Openwrt and work out a tutorial to help people get quick access to Openwrt developing.&lt;/p&gt;
+
+&lt;p&gt;The tutorial now is only in Chinese, later will release English version. Click &lt;a href=&#34;https://zhiming-huang.github.io/PDF/Chapter1.pdf&#34;&gt;Chapter 1&lt;/a&gt; and &lt;a href=&#34;https://zhiming-huang.github.io/PDF/Chapter2.pdf&#34;&gt;Chapter2&lt;/a&gt; to download.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Intelligent Information Processing</title>
+      <link>https://zhiming-huang.github.io/project/intelliinfoproc/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhiming-huang.github.io/project/intelliinfoproc/</guid>
+      <description>&lt;p&gt;The project is maintained by Intelligent Information Lab at Northwestern Polytechnical University, supervised by &lt;a href=&#34;https://scholar.google.com/citations?user=8voeILsAAAAJ&#34; target=&#34;_blank&#34;&gt;Prof.Yong Deng&lt;/a&gt; and &lt;a href=&#34;http://teacher.nwpu.edu.cn/jiangwen.html&#34; target=&#34;_blank&#34;&gt;Prof.Wen Jiang&lt;/a&gt;. The research mainly on fields of Evidence theory, Complexity Network, Fuzzy Set Theory, Bio-inspired AI, etc.&lt;/p&gt;
+
+&lt;p&gt;I joined this team in 2015.9. At first my research interests focus on processing multiple evaluations from experts and solve the confliction among opinions. Here is a published &lt;a href=&#34;https://zhiming-huang.github.io/publication/fuzzyfmea/&#34;&gt;paper&lt;/a&gt; in &lt;em&gt;Soft Computing&lt;/em&gt;. This paper proposed a method that allows experts give ambiguous evaluation and by combining different experts&amp;rsquo; opinons up, a defuzziation output can be achieved.&lt;/p&gt;
+
+&lt;p&gt;Later on I turned my interests towards Quantum Probability. The quantum probability attracts me in the field of analyzing the human behaviours in Prisoners Dillemma Game. Here is another &lt;a href=&#34;https://zhiming-huang.github.io/publication/quantumbeyesian/&#34;&gt;paper&lt;/a&gt; demonstrating that a blief entropy based quantum Bayesian network explains the violation of &lt;em&gt;Sure Things Principle&lt;/em&gt; in Prisoners Dillemma Game.&lt;/p&gt;
+
+&lt;p&gt;Also, I wrote a simple but robust D-S comination algorithm in Python. Click &lt;a href=&#34;https://github.com/Zhiming-Huang/Dempster-shafer-combination-rules&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to view it.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

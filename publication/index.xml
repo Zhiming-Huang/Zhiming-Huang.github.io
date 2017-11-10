@@ -11,9 +11,39 @@
     <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Clustering Multipath Components Based on multi-snapshots fusion</title>
+      <link>https://zhiming-huang.github.io/publication/fusionmpcs/</link>
+      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhiming-huang.github.io/publication/fusionmpcs/</guid>
+      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Modified Fuzzy C-means Algorithm for Clustering Multipath Components in Radio Channel Modeling</title>
+      <link>https://zhiming-huang.github.io/publication/clustermpcs/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhiming-huang.github.io/publication/clustermpcs/</guid>
+      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Uncertainty measurement with belief entropy on interference effect in Quantum-Like Bayesian Networks</title>
+      <link>https://zhiming-huang.github.io/publication/quantumbeyesian/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhiming-huang.github.io/publication/quantumbeyesian/</guid>
+      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>A new method to evaluate risk in failure mode and effects analysis under fuzzy information</title>
       <link>https://zhiming-huang.github.io/publication/fuzzyfmea/</link>
-      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://zhiming-huang.github.io/publication/fuzzyfmea/</guid>
       <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
@@ -21,12 +51,22 @@
     </item>
     
     <item>
-      <title>Uncertainty measurement with belief entropy on interference effect in Quantum-Like Bayesian Networks</title>
-      <link>https://zhiming-huang.github.io/publication/person-re-identification/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <title>A Queuing Network Model For Airport Security Chenck Point </title>
+      <link>https://zhiming-huang.github.io/publication/queueairport/</link>
+      <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://zhiming-huang.github.io/publication/person-re-identification/</guid>
-      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+      <guid>https://zhiming-huang.github.io/publication/queueairport/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://zhiming-huang.github.io/img/56381.jpg&#34; alt=&#34;Alt text&#34; title=&#34;Meritorious Winner&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A System Dynastic Model For Water Resources Analysis</title>
+      <link>https://zhiming-huang.github.io/publication/waterresource/</link>
+      <pubDate>Thu, 04 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhiming-huang.github.io/publication/waterresource/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://zhiming-huang.github.io/img/42242.png&#34; alt=&#34;Alt text&#34; title=&#34;Meritorious Winner&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
