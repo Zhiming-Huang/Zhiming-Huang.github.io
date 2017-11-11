@@ -67,29 +67,9 @@
     </item>
     
     <item>
-      <title>A new method to evaluate risk in failure mode and effects analysis under fuzzy information</title>
-      <link>https://zhiming-huang.github.io/publication/fuzzyfmea/</link>
-      <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhiming-huang.github.io/publication/fuzzyfmea/</guid>
-      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Optimizing the Passenger Throughput at an Airport Security Checkpoint</title>
-      <link>https://zhiming-huang.github.io/publication/queueairport/</link>
-      <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhiming-huang.github.io/publication/queueairport/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://zhiming-huang.github.io/img/56381.jpg&#34; alt=&#34;Alt text&#34; title=&#34;Meritorious Winner&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Medical Image Segmentation based on Evidence Theory and Its Accomplishment in FPGA</title>
       <link>https://zhiming-huang.github.io/talk/imagesegment/</link>
-      <pubDate>Tue, 14 Jun 2016 10:00:00 +0000</pubDate>
+      <pubDate>Wed, 14 Jun 2017 10:00:00 +0000</pubDate>
       
       <guid>https://zhiming-huang.github.io/talk/imagesegment/</guid>
       <description>&lt;p&gt;You can click &lt;a href=&#34;https://zhiming-huang.github.io/slides/imagesegment.pdf&#34;&gt;here&lt;/a&gt; to download the Slides (Chinese version).&lt;/p&gt;
@@ -110,6 +90,26 @@ Image 1
 Image 2
 &lt;img src=&#34;https://zhiming-huang.github.io/img/mr.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
 Result&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A new method to evaluate risk in failure mode and effects analysis under fuzzy information</title>
+      <link>https://zhiming-huang.github.io/publication/fuzzyfmea/</link>
+      <pubDate>Fri, 02 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhiming-huang.github.io/publication/fuzzyfmea/</guid>
+      <description>&lt;p&gt;#More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Optimizing the Passenger Throughput at an Airport Security Checkpoint</title>
+      <link>https://zhiming-huang.github.io/publication/queueairport/</link>
+      <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhiming-huang.github.io/publication/queueairport/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://zhiming-huang.github.io/img/56381.jpg&#34; alt=&#34;Alt text&#34; title=&#34;Meritorious Winner&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
