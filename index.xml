@@ -82,7 +82,8 @@
 It is clear that there are three rectangles in these two figures, which are surrounded by a grey outskirt. In the first image, the color of the first rectangle is close to the outskirt, making it difficult to dicriminate each other. In the second image, the second and third rectangles are close to each other.&lt;/p&gt;
 
 &lt;p&gt;After the application of the algorithm, the processed image to be like as follow:
-&lt;img src=&#34;https://zhiming-huang.github.io/img/oimresults.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;. As we can see, the three rectangles and outskirt are distinct to each other.
+&lt;img src=&#34;https://zhiming-huang.github.io/img/oimresults.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
+As we can see, the three rectangles and outskirt are distinct to each other.
 In addition, here is another example,
 &lt;img src=&#34;https://zhiming-huang.github.io/img/m1.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
 Image 1
