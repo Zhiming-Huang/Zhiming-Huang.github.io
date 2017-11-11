@@ -22,5 +22,32 @@
 </description>
     </item>
     
+    <item>
+      <title>Medical Image Segmentation based on Evidence Theory and Its Accomplishment in FPGA</title>
+      <link>https://zhiming-huang.github.io/talk/imagesegment/</link>
+      <pubDate>Tue, 14 Jun 2016 10:00:00 +0000</pubDate>
+      
+      <guid>https://zhiming-huang.github.io/talk/imagesegment/</guid>
+      <description>&lt;p&gt;You can click &lt;a href=&#34;https://zhiming-huang.github.io/slides/imagesegment.pdf&#34;&gt;here&lt;/a&gt; to download the Slides (Chinese version).&lt;/p&gt;
+
+&lt;p&gt;The figure below shows the proposed algorithm,
+&lt;img src=&#34;https://zhiming-huang.github.io/img/imseg.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below process shows an example of implementing the algorithm,
+ &lt;img src=&#34;https://zhiming-huang.github.io/img/oima1.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt; &lt;img src=&#34;https://zhiming-huang.github.io/img/oima2.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
+It is clear that there are three rectangles in these two figures, which are surrounded by a grey outskirt. In the first image, the color of the first rectangle is close to the outskirt, making it difficult to dicriminate each other. In the second image, the second and third rectangles are close to each other.&lt;/p&gt;
+
+&lt;p&gt;After the application of the algorithm, the processed image to be like as follow:
+&lt;img src=&#34;https://zhiming-huang.github.io/img/oimresults.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;. As we can see, the three rectangles and outskirt are distinct to each other.
+In addition, here is another example,
+&lt;img src=&#34;https://zhiming-huang.github.io/img/m1.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
+Image 1
+&lt;img src=&#34;https://zhiming-huang.github.io/img/m2.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
+Image 2
+&lt;img src=&#34;https://zhiming-huang.github.io/img/mr.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
+Result&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
