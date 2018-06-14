@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Zhiming Huang</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://zhiming-huang.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>D-S Combination Theory based Multipath Components Clustering Algorithm</title>
@@ -16,8 +18,7 @@
       <pubDate>Tue, 28 Nov 2017 10:00:00 +0000</pubDate>
       
       <guid>https://zhiming-huang.github.io/talk/coursetalk/</guid>
-      <description>&lt;p&gt;The talk will be given on 2017-11-28, slides will be uploaded once I work it out.&lt;/p&gt;
-</description>
+      <description>The talk will be given on 2017-11-28, slides will be uploaded once I work it out.</description>
     </item>
     
     <item>
@@ -26,10 +27,7 @@
       <pubDate>Thu, 21 Sep 2017 10:00:00 +0000</pubDate>
       
       <guid>https://zhiming-huang.github.io/talk/interntalk/</guid>
-      <description>&lt;script async class=&#39;speakerdeck-embed&#39; data-id=&#39;c7779e76c27142b9b44f88e63b06b204&#39; data-ratio=&#39;1.33333333333333&#39; src=&#39;//speakerdeck.com/assets/embed.js&#39;&gt;&lt;/script&gt;
-
-&lt;p&gt;You can click &lt;a href=&#34;https://zhiming-huang.github.io/slides/ClusteringMPCchannel.pdf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; to download the Slides.&lt;/p&gt;
-</description>
+      <description>You can click here to download the Slides.</description>
     </item>
     
     <item>
@@ -38,26 +36,8 @@
       <pubDate>Wed, 14 Jun 2017 10:00:00 +0000</pubDate>
       
       <guid>https://zhiming-huang.github.io/talk/imagesegment/</guid>
-      <description>&lt;p&gt;You can click &lt;a href=&#34;https://zhiming-huang.github.io/slides/imagesegment.pdf&#34;&gt;here&lt;/a&gt; to download the Slides (Chinese version).&lt;/p&gt;
-
-&lt;p&gt;The figure below shows the proposed algorithm,
-&lt;img src=&#34;https://zhiming-huang.github.io/img/imseg.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Below process shows an example of implementing the algorithm,
- &lt;img src=&#34;https://zhiming-huang.github.io/img/oima1.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt; &lt;img src=&#34;https://zhiming-huang.github.io/img/oima2.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
-It is clear that there are three rectangles in these two figures, which are surrounded by a grey outskirt. In the first image, the color of the first rectangle is close to the outskirt, making it difficult to dicriminate each other. In the second image, the second and third rectangles are close to each other.&lt;/p&gt;
-
-&lt;p&gt;After the application of the algorithm, the processed image to be like as follow:
-&lt;img src=&#34;https://zhiming-huang.github.io/img/oimresults.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
-As we can see, the three rectangles and outskirt are distinct to each other.
-In addition, here is another example,
-&lt;img src=&#34;https://zhiming-huang.github.io/img/m1.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
-Image 1
-&lt;img src=&#34;https://zhiming-huang.github.io/img/m2.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
-Image 2
-&lt;img src=&#34;https://zhiming-huang.github.io/img/mr.png&#34; alt=&#34;Alt text&#34; title=&#34;Combination Process&#34; /&gt;
-Result&lt;/p&gt;
-</description>
+      <description>You can click here to download the Slides (Chinese version).
+The figure below shows the proposed algorithm, Below process shows an example of implementing the algorithm, It is clear that there are three rectangles in these two figures, which are surrounded by a grey outskirt. In the first image, the color of the first rectangle is close to the outskirt, making it difficult to dicriminate each other. In the second image, the second and third rectangles are close to each other.</description>
     </item>
     
   </channel>
