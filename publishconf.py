@@ -11,10 +11,11 @@ from pelicanconf import *
 SITEURL = "https://zhiminghuang.me"
 RELATIVE_URLS = False
 
+# GitHub Pages specific settings
+DELETE_OUTPUT_DIRECTORY = True
+
 FEED_ALL_ATOM = "feeds/all.atom.xml"
 CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
-
-DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 

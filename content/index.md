@@ -9,6 +9,7 @@ Position: University of Victoria, BC, Canada
 Google_scholar: https://scholar.google.com/citations?hl=zh-CN&user=CGFcFNUAAAAJ&view_op=list_works&sortby=pubdate
 Github: https://github.com/Zhiming-Huang
 Linkedin: https://linkedin.com/in/zhiminghuang
+CV: cv_zm.pdf
 
 ## About
 

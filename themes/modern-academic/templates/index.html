@@ -86,6 +86,17 @@
                                     <i class="bi bi-linkedin fs-2"></i>
                                 </a>
                                 {% endif %}
+                                
+                                {% if article.cv %}
+                                <a href="{{ SITEURL }}/files/{{ article.cv }}" 
+                                   class="social-link text-muted" 
+                                   target="_blank" 
+                                   rel="noopener"
+                                   title="Download CV"
+                                   data-bs-toggle="tooltip">
+                                    <i class="bi bi-file-earmark-person fs-2"></i>
+                                </a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
