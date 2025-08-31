@@ -1,0 +1,1021 @@
+/* Bootstrap 5 Custom Styles for Academic Website */
+
+/* Custom CSS Variables */
+:root {
+    --bs-font-sans-serif: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    --custom-text-heading: #286687;  /* 深绿蓝色 - 深沉而专业的绿蓝色 */
+    --custom-primary: #0d6efd;
+    --custom-text-slate: #334155;    /* 备选：优雅石板色 */
+    --custom-text-indigo: #4f46e5;   /* 备选：高级靛蓝色 */
+    --custom-text-emerald: #059669;  /* 备选：翡翠绿 */
+}
+
+/* Typography Overrides */
+body {
+    font-family: var(--bs-font-sans-serif);
+    line-height: 1.7;
+}
+
+/* Custom heading colors */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: var(--custom-text-heading) !important;
+    font-family: var(--bs-font-sans-serif);
+}
+
+/* Navbar styling with scroll effects */
+.navbar {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar layout for proper distribution */
+.navbar .w-100 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+/* Ensure navbar brand is at the absolute left */
+.navbar-brand {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+    font-size: 1.1rem;
+    color: #000000 !important;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .navbar-brand {
+    color: #ffffff !important;
+}
+
+/* Nav links styling */
+.navbar-nav .nav-link {
+    color: #000000 !important;
+    font-weight: 400;  /* 默认不加粗 */
+    padding: 0.75rem 0.5rem;
+    margin: 0 0.25rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* 当前页面的导航链接加粗 */
+.navbar-nav .nav-link.active {
+    font-weight: 600 !important;
+}
+
+/* 滚动状态下的导航链接颜色 */
+.navbar.scrolled .navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+/* 滚动状态下当前页面的导航链接用亮蓝色 */
+.navbar.scrolled .navbar-nav .nav-link.active {
+    color: #4db8ff !important;  /* 亮蓝色 */
+}
+
+/* 悬停效果 */
+.navbar-nav .nav-link:hover {
+    color: var(--custom-primary) !important;
+}
+
+.navbar.scrolled .navbar-nav .nav-link:hover {
+    color: #4db8ff !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--custom-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 80%;
+}
+
+/* Card hover effects */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Content styling */
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6 {
+    color: var(--custom-text-heading) !important;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.page-content h1 {
+    font-size: 2rem;
+}
+
+.page-content h2 {
+    font-size: 1.5rem;
+}
+
+.page-content h3 {
+    font-size: 1.25rem;
+}
+
+.page-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.page-content ul,
+.page-content ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.page-content li {
+    margin-bottom: 0.25rem;
+    line-height: 1.6;
+}
+
+.page-content a {
+    color: var(--custom-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.page-content a:hover {
+    border-bottom-color: var(--custom-primary);
+}
+
+.page-content strong {
+    font-weight: 600;
+    color: var(--custom-text-heading);
+}
+
+.page-content blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid var(--custom-primary);
+    background-color: #f8f9fa;
+    font-style: italic;
+}
+
+.page-content code {
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+    font-size: 0.875rem;
+    background-color: #f8f9fa;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #e9ecef;
+}
+
+.page-content pre {
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+    font-size: 0.875rem;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e9ecef;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.page-content pre code {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+/* Skip link accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--custom-primary);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Profile image styling */
+.profile-image {
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile image modal styling */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-body img {
+    transition: all 0.3s ease;
+}
+
+.modal-body img:hover {
+    transform: scale(1.02);
+}
+
+/* News section styling */
+.news-section {
+    margin: 2rem 0;
+}
+
+.news-section .card {
+    border: none;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.news-section ul {
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+}
+
+.news-section li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.news-section li:last-child {
+    margin-bottom: 0;
+}
+
+.news-section li strong {
+    color: var(--custom-text-heading);
+    font-weight: 600;
+}
+
+#toggleNewsBtn {
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+}
+
+#toggleNewsBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#toggleNewsIcon {
+    transition: transform 0.3s ease;
+}
+
+.news-section li {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.news-section li[style*="display: none"] {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Profile and About layout styling */
+.profile-about-section .row {
+    min-height: auto; /* Changed from 500px to auto to reduce space */
+}
+
+.profile-about-section .col-lg-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-about-section .col-lg-7 {
+    display: block; /* Changed from flex to block to avoid layout issues */
+}
+
+.profile-about-section .page-content {
+    height: 100%;
+}
+
+/* About content styling */
+.profile-about-section .page-content h2 {
+    color: var(--custom-text-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f1f3f4;
+    padding-bottom: 0.5rem;
+}
+
+.profile-about-section .page-content p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Divider styling */
+hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 2px solid #e9ecef;
+    opacity: 0.8;
+}
+
+/* Section spacing */
+section {
+    margin-bottom: 0.25rem;
+}
+
+/* Tighter spacing for card sections */
+.news-section,
+section:has(.card) {
+    margin-bottom: 0.1rem;
+}
+
+/* Teaching and Service sections styling */
+.card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.card .list-unstyled li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.card .list-unstyled li:last-child {
+    border-bottom: none;
+}
+
+/* Teaching and Service content styling */
+.teaching-content h2,
+.service-content h2 {
+    display: none; /* Hide the h2 titles from markdown as we show them in template */
+}
+
+.teaching-content ul,
+.service-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.teaching-content ul li,
+.service-content ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f1f3f4;
+    line-height: 1.6;
+}
+
+.teaching-content ul li:last-child,
+.service-content ul li:last-child {
+    border-bottom: none;
+}
+
+.teaching-content ul li strong,
+.service-content ul li strong {
+    color: var(--custom-text-heading);
+    font-weight: 600;
+}
+
+/* Social links styling */
+.social-icons {
+    margin: 1.5rem 0;
+}
+
+/* Social links in About section */
+.profile-about-section .social-icons {
+    margin: 2rem 0 0 0;
+    justify-content: center !important;
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    clear: both;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--custom-primary) 0%, var(--custom-text-heading) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.social-link:hover::before {
+    opacity: 0.1;
+}
+
+.social-link:hover {
+    color: var(--custom-primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.social-link i {
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.social-link:hover i {
+    transform: scale(1.1);
+}
+
+/* Specific social platform colors on hover */
+.social-link[title="Google Scholar"]:hover {
+    color: #4285f4 !important;
+}
+
+.social-link[title="GitHub"]:hover {
+    color: #333 !important;
+}
+
+.social-link[title="LinkedIn"]:hover {
+    color: #0077b5 !important;
+}
+
+/* Footer social links styling */
+footer .bi {
+    transition: all 0.3s ease;
+}
+
+footer a:hover .bi {
+    color: var(--custom-primary) !important;
+    transform: translateY(-2px);
+}
+
+/* 响应式设计 - 全面覆盖各种屏幕尺寸 */
+
+/* 超宽屏幕 (1400px+) - 4K显示器等 */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.8rem;
+        padding: 0.75rem 0.75rem;
+        margin: 0 0.5rem;
+    }
+    
+    .page-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-content h2 {
+        font-size: 2rem;
+    }
+    
+    .page-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .page-content p,
+    .page-content li {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    
+    .card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* 标准宽屏 (1200px - 1399px) - 笔记本/台式机 */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.75rem;
+        padding: 0.75rem 0.6rem;
+        margin: 0 0.3rem;
+    }
+    
+    .page-content h1 {
+        font-size: 2.25rem;
+    }
+    
+    .page-content h2 {
+        font-size: 1.75rem;
+    }
+    
+    .page-content p,
+    .page-content li {
+        font-size: 1.05rem;
+    }
+}
+
+/* 中等屏幕 (992px - 1199px) - 小笔记本 */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.75rem;
+        padding: 0.75rem 0.5rem;
+        margin: 0 0.25rem;
+    }
+    
+    .page-content h1 {
+        font-size: 2rem;
+    }
+    
+    .page-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .page-content h3 {
+        font-size: 1.25rem;
+    }
+}
+
+/* 平板横屏 (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+        padding: 0 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.4rem;
+        margin: 0 0.1rem;
+    }
+    
+    /* 平板上仍然保持水平导航 */
+    .navbar-nav {
+        flex-direction: row;
+    }
+    
+    .page-content h1 {
+        font-size: 1.8rem;
+        margin-top: 1.5rem;
+    }
+    
+    .page-content h2 {
+        font-size: 1.4rem;
+        margin-top: 1.25rem;
+    }
+    
+    .page-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .page-content p,
+    .page-content li {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    main {
+        margin-top: 70px !important;
+    }
+    
+    /* Profile image for tablet landscape */
+    .profile-image {
+        width: 240px !important;
+        height: 240px !important;
+    }
+}
+
+/* 平板竖屏和小屏幕 (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+        padding: 0 1rem;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-brand {
+        font-size: 0.95rem;
+    }
+    
+    /* 移动端导航布局 */
+    .navbar .w-100 {
+        justify-content: space-between;
+    }
+    
+    /* 切换到垂直导航 */
+    .navbar-nav .nav-link {
+        text-align: center;
+        padding: 0.75rem;
+        margin: 0;
+        border-bottom: 1px solid #e9ecef;
+        font-size: 0.8rem;
+        letter-spacing: 0.3px;
+    }
+    
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+    
+    .navbar-nav .nav-link:hover,
+    .navbar.scrolled .navbar-nav .nav-link:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .navbar.scrolled .navbar-nav .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .page-content h1 {
+        font-size: 1.6rem;
+        margin-top: 1.25rem;
+    }
+    
+    .page-content h2 {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+    
+    .page-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .page-content p,
+    .page-content li {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    main {
+        margin-top: 65px !important;
+    }
+    
+    /* Profile image for tablet portrait */
+    .profile-image {
+        width: 220px !important;
+        height: 220px !important;
+    }
+}
+
+/* 手机屏幕 (最大575px) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .navbar {
+        padding: 0.4rem 0;
+    }
+    
+    .navbar-brand {
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-toggler {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+        border: none;
+    }
+    
+    /* 手机端导航布局 */
+    .navbar .w-100 {
+        justify-content: space-between;
+    }
+    
+    .navbar-nav .nav-link {
+        text-align: center;
+        padding: 1rem;
+        margin: 0;
+        border-bottom: 1px solid #e9ecef;
+        font-size: 0.85rem;
+        letter-spacing: 0.4px;
+        font-weight: 500;
+    }
+    
+    .navbar-nav .nav-link.active {
+        font-weight: 600;
+        background-color: #f8f9fa;
+    }
+    
+    .navbar.scrolled .navbar-nav .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #4db8ff !important;
+    }
+    
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .navbar.scrolled .navbar-nav .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* 内容区域调整 */
+    main {
+        margin-top: 60px !important;
+    }
+    
+    .page-content {
+        padding: 1rem 0;
+    }
+    
+    .page-content h1 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .page-content h2 {
+        font-size: 1.25rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+    }
+    
+    .page-content h3 {
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .page-content p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+    }
+    
+    .page-content li {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 0.2rem;
+    }
+    
+    .page-content ul,
+    .page-content ol {
+        padding-left: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* 卡片和组件调整 */
+    .card {
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-text {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    /* 按钮调整 */
+    .btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    /* 徽章调整 */
+    .badge {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    /* 代码块调整 */
+    .page-content code {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.4rem;
+    }
+    
+    .page-content pre {
+        font-size: 0.75rem;
+        padding: 0.75rem;
+        border-radius: 0.4rem;
+    }
+    
+    /* Profile image mobile adjustments */
+    .profile-image {
+        width: 200px !important;
+        height: 200px !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Social links mobile adjustments */
+    .social-link {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .social-link i {
+        font-size: 1.5rem !important;
+    }
+    
+    .social-icons {
+        gap: 1rem !important;
+        margin: 1.5rem 0 !important;
+    }
+    
+    /* Footer调整 */
+    footer {
+        padding: 2rem 0 !important;
+    }
+    
+    footer .bi {
+        font-size: 1.25rem !important;
+    }
+    
+    footer p {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    footer .small {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* 超小屏幕优化 (最大360px) - 较老的手机 */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 0.8rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.8rem;
+        padding: 0.75rem;
+    }
+    
+    .page-content {
+        padding: 0.75rem 0;
+    }
+    
+    .page-content h1 {
+        font-size: 1.3rem;
+    }
+    
+    .page-content h2 {
+        font-size: 1.1rem;
+    }
+    
+    .page-content p,
+    .page-content li {
+        font-size: 0.8rem;
+    }
+    
+    .card-body {
+        padding: 0.75rem;
+    }
+    
+    main {
+        margin-top: 55px !important;
+    }
+    
+    /* Profile image for very small screens */
+    .profile-image {
+        width: 160px !important;
+        height: 160px !important;
+    }
+    
+    /* Mobile layout adjustments */
+    .profile-about-section .row {
+        min-height: auto;
+    }
+    
+    .profile-about-section .col-lg-5,
+    .profile-about-section .col-lg-7 {
+        display: block;
+    }
+    
+    /* Social links for very small screens */
+    .social-link {
+        width: 45px !important;
+        height: 45px !important;
+    }
+    
+    .social-link i {
+        font-size: 1.3rem !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    footer {
+        display: none !important;
+    }
+    
+    main {
+        margin-top: 0 !important;
+    }
+    
+    .page-content a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.btn:focus,
+.nav-link:focus,
+a:focus {
+    outline: 2px solid var(--custom-primary);
+    outline-offset: 2px;
+}

@@ -1,42 +1,48 @@
 Title: Research
 Date: 2024-01-01
 Slug: research
+Template: research
 
-# Research Interests
+My research focuses on the following key topics.
 
-My research focuses on the intersection of online learning, game theory, and computer networks. I am particularly interested in developing theoretical foundations and practical algorithms for intelligent network systems.
+## Game-theoretic Learning with Bandit Feedback
 
-## Main Research Areas
+Problems in computer networks often arise from the interactions among multiple agents. In this research, we theoretically analyze scenarios involving multiple agents engaged in normal-form or extensive-form games with incomplete information and bandit feedback, employing uncoupled learning techniques. Specifically, we design bandit algorithms that guarantee convergence to equilibrium when adopted by all agents in the game, leveraging swap-regret-minimization techniques. Additionally, we explore the use of adaptive (optimistic or predictive) learning techniques to accelerate the convergence rate of these bandit algorithms.
 
-### Online Learning and Bandit Algorithms
-I work on multi-armed bandit problems and their applications in network optimization. My research includes:
-- Contextual bandit algorithms for dynamic network environments
-- Thompson Sampling with differential privacy guarantees
-- Regret minimization in non-stationary environments
+**Related Publications:**
 
-### Game Theory for Networks
-I explore game-theoretic approaches to network resource allocation and protocol design:
-- Mechanism design for distributed systems
-- Nash equilibrium analysis in network games
-- Incentive-compatible protocols
+1. **Faster Convergence for Unknown-game Bandits** IEEE International Conference on Computer Communications (INFOCOM 2025), *Zhiming Huang, Jianping Pan*  
 
-### Applications in Computer Networks
-My work bridges theory and practice in:
-- Adaptive routing and load balancing
-- Quality of Service (QoS) optimization
-- Edge computing and content delivery
+2. **Game-theoretic Bandits for Network Optimization with High-probability Swap-regret Upper Bounds**, 2024, IEEE/ACM Transactions on Networking (TON), *Zhiming Huang, Jianping Pan*  
 
-## Current Projects
+3. **A Near-optimal High-probability Swap-Regret Upper Bound for Multi-agent Bandits in Unknown General-sum Games**, 2023, Uncertainty in Artificial Intelligence (UAI 2023), *Zhiming Huang, Jianping Pan*  
 
-### Differentially Private Multi-Armed Bandits
-Developing privacy-preserving online learning algorithms that maintain strong theoretical guarantees while protecting user data in networked systems.
+## Combinatorial Learning with Bandit Feedback
 
-### Intelligent Network Resource Allocation
-Designing adaptive algorithms for resource allocation in cloud and edge computing environments using online learning techniques.
+Combinatorial optimization is also an important topic in computer networks. For example, a routing path selection involves a combination of feasible links. In this research, we are interested in the online optimization problem with bandit feedback, using Thompson sampling or Follow-the-regularized-leader (FTRL) techniques.
 
-### Game-Theoretic Analysis of Network Protocols
-Analyzing the strategic behavior of network participants and designing incentive-compatible mechanisms for efficient network operation.
+**Related Publications:**
 
-## Collaborations
+1. **Adversarial Semi-Bandits with Moving Arms**, Accepted by IEEE International Conference on Computer Communications (INFOCOM 2025), May 2025, *Zhiming Huang, Jianping Pan*  
 
-I collaborate with researchers from various institutions and industry partners to apply theoretical insights to real-world network problems. My work spans both fundamental research and practical system implementation.
+2. **Gaussian Randomized Exploration for Semi-bandits with Sleeping Arms**, NeurIPS 2024 Workshop on Bayesian Decision-making and Uncertainty, Dec 2024, *Zhiming Huang, Bingshan Hu, Jianping Pan*  
+
+3. **Poster: Multi-agent Combinatorial Bandits with Moving Arms** (Best Poster Award), IEEE International Conference on Distributed Computing Systems (ICDCS 2021), *Zhiming Huang, Bingshan Hu, Jianping Pan*  
+
+## Applications of Learning in Computer Networks
+
+We apply the tools we studied above to concrete network problems, such as end-to-end congestion control, heterogeneous network selection, caching and routing problems.
+
+**Related Publications:**
+
+1. **Distributed Learning of Unknown Games for HetNet Selection**, IEEE Transactions on Network Science and Engineering (TNSE)  
+   *Zhiming Huang, Jianping Pan*  
+
+2. **End-to-end Congestion Control as Learning for Unknown Games with Bandit Feedback**, IEEE International Conference on Distributed Computing Systems (ICDCS 2023)  
+   *Zhiming Huang, Kaiyang Liu, Jianping Pan*  
+
+3. **TSOR: Thompson Sampling-based Opportunistic Routing**, IEEE Transactions on Wireless Communications (TWC)  
+   *Zhiming Huang, Yifan Xu, Jianping Pan*  
+
+4. **Caching by User Preference with Delayed Feedback for Heterogeneous Cellular Networks**, IEEE Transactions on Wireless Communications (TWC)  
+   *Zhiming Huang, Bingshan Hu, Jianping Pan*  

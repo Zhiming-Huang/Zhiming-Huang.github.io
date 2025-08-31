@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-4">
+    <div class="container-xl">
+    <!-- Profile and About Section -->
+    <section class="py-4 profile-about-section">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-xl-10">
+                {% if articles %}
+                    {% set article = articles[0] %}
+                    
+                    <div class="row align-items-start">
+                        <!-- Left Column: Profile Image and Info -->
+                        <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                            <!-- Profile Image -->
+                            {% if article.profile_image %}
+                            <div class="mb-4">
+                                <img src="{{ SITEURL }}/images/{{ article.profile_image }}" 
+                                     alt="{{ article.full_name or AUTHOR }}" 
+                                     class="profile-image rounded-circle shadow-lg mx-auto d-block"
+                                     style="width: 280px; height: 280px; object-fit: cover; border: 4px solid #ffffff; cursor: pointer;"
+                                     data-bs-toggle="modal" 
+                                     data-bs-target="#profileImageModal"
+                                     title="Click to view full image">
+                            </div>
+                            {% endif %}
+                            
+                            <!-- Name and Position -->
+                            {% if article.full_name %}
+                            <h1 class="h3 fw-bold mb-2">{{ article.full_name }}</h1>
+                            {% else %}
+                            <h1 class="h3 fw-bold mb-2">{{ AUTHOR }}</h1>
+                            {% endif %}
+                            
+                            {% if article.position %}
+                            <h2 class="h5 text-muted mb-4 fw-normal">{{ article.position }}</h2>
+                            {% else %}
+                            <h2 class="h5 text-muted mb-4 fw-normal">PhD Candidate, University of Victoria, BC, Canada</h2>
+                            {% endif %}
+                            
+
+                        </div>
+                        
+                        <!-- Right Column: About Content -->
+                        <div class="col-lg-7">
+                            <article class="page-content">
+                                {{ article.content }}
+                            </article>
+                            
+                            <!-- Social Links moved here -->
+                            <div class="d-flex justify-content-center gap-4 social-icons mt-4">
+                                {% if article.google_scholar %}
+                                <a href="{{ article.google_scholar }}" 
+                                   class="social-link text-muted" 
+                                   target="_blank" 
+                                   rel="noopener"
+                                   title="Google Scholar"
+                                   data-bs-toggle="tooltip">
+                                    <i class="bi bi-mortarboard fs-2"></i>
+                                </a>
+                                {% endif %}
+                                
+                                {% if article.github %}
+                                <a href="{{ article.github }}" 
+                                   class="social-link text-muted" 
+                                   target="_blank" 
+                                   rel="noopener"
+                                   title="GitHub"
+                                   data-bs-toggle="tooltip">
+                                    <i class="bi bi-github fs-2"></i>
+                                </a>
+                                {% endif %}
+                                
+                                {% if article.linkedin %}
+                                <a href="{{ article.linkedin }}" 
+                                   class="social-link text-muted" 
+                                   target="_blank" 
+                                   rel="noopener"
+                                   title="LinkedIn"
+                                   data-bs-toggle="tooltip">
+                                    <i class="bi bi-linkedin fs-2"></i>
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                {% else %}
+                    <!-- Fallback Layout -->
+                    <div class="row align-items-start">
+                        <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                            <div class="mb-4">
+                                <img src="{{ SITEURL }}/images/profile.jpeg" 
+                                     alt="{{ AUTHOR }}" 
+                                     class="profile-image rounded-circle shadow-lg mx-auto d-block"
+                                     style="width: 280px; height: 280px; object-fit: cover; border: 4px solid #ffffff; cursor: pointer;"
+                                     data-bs-toggle="modal" 
+                                     data-bs-target="#fallbackImageModal"
+                                     title="Click to view full image">
+                            </div>
+                            <h1 class="h3 fw-bold mb-2">{{ AUTHOR }}</h1>
+                            <h2 class="h5 text-muted mb-4 fw-normal">PhD Candidate, University of Victoria, BC, Canada</h2>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="text-center">
+                                <p class="lead text-muted">Welcome to my academic website</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    
+    <!-- Divider -->
+    <section class="py-1">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-xl-10">
+                <hr class="my-2" style="border-top: 2px solid #e9ecef; opacity: 0.8;">
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="py-2">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-xl-10">
+                <div class="news-section">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h2 class="h3 fw-semibold text-primary mb-0">News</h2>
+                        <button class="btn btn-outline-primary btn-sm" id="toggleNewsBtn">
+                            <span id="toggleNewsText">Show All</span>
+                            <i class="bi bi-chevron-down ms-1" id="toggleNewsIcon"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div id="newsContent">
+                                <ul>
+                                    <li><strong>May 2025</strong>: Our paper on differentially private Thompson Sampling has been accepted by <strong>ICML 2025</strong></li>
+                                    <li><strong>Feb 2025</strong>: Our paper has been accepted by <strong>ACM MMSys 2025</strong></li>
+                                    <li><strong>Dec 2024</strong>: I am delighted to serve as a shadow TPC member for <strong>ACM CoNEXT 2025</strong></li>
+                                    <li><strong>Dec 2024</strong>: Two papers have been accepted by <strong>IEEE INFOCOM 2025</strong></li>
+                                    <li><strong>Nov 2024</strong>: Our paper has been accepted by <strong>IEEE TMC</strong></li>
+                                    <li><strong>Oct 2024</strong>: Our paper has been accepted by <strong>NeurIPS BDU Workshop 2024</strong></li>
+                                    <li><strong>Jul 2024</strong>: Our paper has been accepted by <strong>IEEE/ACM TON</strong></li>
+                                    <li><strong>Apr 2024</strong>: Our paper has been accepted by <strong>IEEE TPDS</strong></li>
+                                    <li><strong>Apr 2024</strong>: I have been awarded the <strong>British Columbia Graduate Award</strong></li>
+                                    <li><strong>Jan 2024</strong>: Our paper has been accepted by <strong>IEEE TNSE</strong></li>
+                                    <li><strong>Aug 2023</strong>: I have been awarded the <strong>President's Fellowship in Research-Enriched Teaching</strong></li>
+                                    <li><strong>April 2023</strong>: Our paper has been accepted by <strong>UAI 2023</strong></li>
+                                    <li><strong>April 2023</strong>: Our paper has been accepted by <strong>ICDCS 2023</strong></li>
+                                    <li><strong>Aug 2021</strong>: I have been selected as the <strong>IEEE Day Ambassador for IEEE Canada Region</strong></li>
+                                    <li><strong>July 2021</strong>: We received the <strong>Best Poster Award in ICDCS 2021</strong></li>
+                                    <li><strong>2020</strong>: Completed MSc in Computer Science at University of Victoria</li>
+                                    <li><strong>2018</strong>: Completed BEng in Communications Engineering at Northwestern Polytechnical University, Xi'an, China</li>
+                                    <li><strong>2017</strong>: Started research in computational methods and network applications</li>
+                                    <li><strong>2016</strong>: Received undergraduate research fellowship</li>
+                                    <li><strong>2015</strong>: Participated in international programming competition</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    {% for article in articles %}
+        {% if article.title == 'Teaching' %}
+        <section class="py-1">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-xl-10">
+                    <h2 class="h3 fw-semibold text-primary mb-2">Teaching</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="teaching-content">
+                                {{ article.content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+    {% endfor %}
+
+    <!-- Service Section -->
+    {% for article in articles %}
+        {% if article.title == 'Service' %}
+        <section class="py-1">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-xl-10">
+                    <h2 class="h3 fw-semibold text-primary mb-2">Service</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="service-content">
+                                {{ article.content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+    {% endfor %}
+
+
+    
+    <!-- Profile Image Modal -->
+    {% if articles %}
+        {% set article = articles[0] %}
+        {% if article.profile_image %}
+        <div class="modal fade" id="profileImageModal" tabindex="-1" aria-labelledby="profileImageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="profileImageModalLabel">{{ article.full_name or AUTHOR }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center p-4">
+                        <img src="{{ SITEURL }}/images/{{ article.profile_image }}" 
+                             alt="{{ article.full_name or AUTHOR }}" 
+                             class="img-fluid rounded shadow-sm"
+                             style="max-height: 70vh; width: auto;">
+                        {% if article.profile_image_caption %}
+                        <p class="mt-3 text-muted fst-italic mb-0">{{ article.profile_image_caption }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% else %}
+        <!-- Fallback Modal -->
+        <div class="modal fade" id="fallbackImageModal" tabindex="-1" aria-labelledby="fallbackImageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="fallbackImageModalLabel">{{ AUTHOR }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center p-4">
+                        <img src="{{ SITEURL }}/images/profile.jpeg" 
+                             alt="{{ AUTHOR }}" 
+                             class="img-fluid rounded shadow-sm"
+                             style="max-height: 70vh; width: auto;">
+                        <p class="mt-3 text-muted fst-italic mb-0">Photographed on May 11, 2024, in Victoria BC, Canada - Aurora</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    
+    </div>
+</div>
+{% endblock %}

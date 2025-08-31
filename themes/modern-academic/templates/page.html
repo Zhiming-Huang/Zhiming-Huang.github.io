@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
+
+{% block description %}{{ page.summary|striptags if page.summary else page.title }}{% endblock %}
+
+{% block body_class %}page page-{{ page.slug }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8">
+            <article class="py-5">
+                <header class="text-center mb-5 pb-4 border-bottom">
+                    <h1 class="display-5 fw-bold text-primary mb-3">{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                        <p class="lead text-muted">{{ page.subtitle }}</p>
+                    {% endif %}
+                    {% if page.date %}
+                        <time class="text-muted small" datetime="{{ page.date.isoformat() }}">
+                            Last updated: {{ page.locale_date }}
+                        </time>
+                    {% endif %}
+                </header>
+                
+                <div class="page-content">
+                    {{ page.content }}
+                </div>
+                
+                {% if page.modified %}
+                <footer class="mt-5 pt-4 border-top">
+                    <p class="text-muted small text-center">
+                        Last modified: {{ page.modified.strftime('%B %d, %Y') }}
+                    </p>
+                </footer>
+                {% endif %}
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock %}

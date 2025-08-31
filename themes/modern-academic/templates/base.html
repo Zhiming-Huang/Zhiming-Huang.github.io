@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block description %}{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}{% endblock %}">
+    <meta name="author" content="{{ AUTHOR }}">
+    
+    <title>{% block title %}{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}{% endblock %}</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
+    
+    <!-- Meta tags -->
+    {% if article %}
+        <meta property="og:title" content="{{ article.title }}">
+        <meta property="og:description" content="{{ article.summary|striptags|truncate(160) }}">
+        <meta property="og:type" content="article">
+    {% elif page %}
+        <meta property="og:title" content="{{ page.title }} - {{ SITENAME }}">
+        <meta property="og:description" content="{{ page.summary|striptags|truncate(160) if page.summary else SITENAME }}">
+        <meta property="og:type" content="website">
+    {% else %}
+        <meta property="og:title" content="{{ SITENAME }}">
+        <meta property="og:description" content="{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}">
+        <meta property="og:type" content="website">
+    {% endif %}
+    
+    {% if FEED_ALL_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+    {% endif %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+        <div class="container-fluid px-3">
+            <div class="w-100 d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-semibold" href="{{ SITEURL }}/">{{ SITENAME }}</a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    {% for title, link in MENUITEMS %}
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium text-uppercase" href="{{ link }}" style="font-size: 0.75rem; letter-spacing: 0.5px;" data-nav-item="{{ title.lower() }}">{{ title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" style="margin-top: 80px;">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                {% if SOCIAL %}
+                <div class="col-12 mb-3">
+                    <div class="d-flex justify-content-center gap-3">
+                        {% for name, link in SOCIAL %}
+                            <a href="{{ link }}" class="text-muted" aria-label="{{ name }}" target="_blank" rel="noopener">
+                                {% if name == 'GitHub' %}
+                                    <i class="bi bi-github fs-4"></i>
+                                {% elif name == 'LinkedIn' %}
+                                    <i class="bi bi-linkedin fs-4"></i>
+                                {% elif name == 'Google Scholar' %}
+                                    <i class="bi bi-mortarboard fs-4"></i>
+                                {% elif name == 'Email' %}
+                                    <i class="bi bi-envelope fs-4"></i>
+                                {% else %}
+                                    {{ name }}
+                                {% endif %}
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                
+                <div class="col-12">
+                    <p class="text-muted mb-1">&copy; 2025 {{ AUTHOR }}. All rights reserved.</p>
+                    <p class="text-muted small mb-0">Powered by <a href="https://getpelican.com/" target="_blank" rel="noopener" class="text-decoration-none">Pelican</a> & <a href="https://getbootstrap.com/" target="_blank" rel="noopener" class="text-decoration-none">Bootstrap</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/main.js"></script>
+</body>
+</html>
