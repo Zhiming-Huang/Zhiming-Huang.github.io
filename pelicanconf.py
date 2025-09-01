@@ -1,5 +1,5 @@
 AUTHOR = 'Zhiming Huang'
-SITENAME = "Zhiming Huang - Academic Researcher"
+SITENAME = "Zhiming's Page"
 SITEURL = ""
 
 # Academic Profile Settings
