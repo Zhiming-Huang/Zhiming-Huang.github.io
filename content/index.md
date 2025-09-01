@@ -13,7 +13,7 @@ CV: cv_zm.pdf
 
 ## About
 
-I received my PhD (2025) and MSc (2020) in Computer Science from the University of Victoria, BC, Canada, under the supervision of Dr. Jianping Pan. Earlier, I earned my BEng in Communications Engineering from Northwestern Polytechnical University, Xi’an, China, in 2018. My research focuses on online learning, particularly bandit algorithms, and game theory, with applications to computer networks.
+I received my PhD (2025) and MSc (2020) in Computer Science from the University of Victoria, BC, Canada, under the supervision of [Dr. Jianping Pan](https://webhome.cs.uvic.ca/~pan/). Earlier, I earned my BEng in Communications Engineering from Northwestern Polytechnical University, Xi'an, China, in 2018. My research focuses on online learning, particularly bandit algorithms, and game theory, with applications to computer networks.
 
 
 
