@@ -5,6 +5,61 @@
 {% block body_class %}home{% endblock %}
 
 {% block content %}
+<!-- JSON-LD Structured Data for Academic Profile -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ AUTHOR }}",
+  "jobTitle": "PhD",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "University of Victoria",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Victoria",
+      "addressRegion": "BC",
+      "addressCountry": "Canada"
+    }
+  },
+  "description": "{{ SITE_DESCRIPTION }}",
+  "url": "{{ SITEURL }}",
+  "image": "{{ SITEURL }}/images/profile.jpeg",
+  "sameAs": [
+    {% if articles and articles[0].google_scholar %}"{{ articles[0].google_scholar }}",{% endif %}
+    {% if articles and articles[0].github %}"{{ articles[0].github }}",{% endif %}
+    {% if articles and articles[0].linkedin %}"{{ articles[0].linkedin }}"{% endif %}
+  ],
+  "alumniOf": [
+    {
+      "@type": "Organization",
+      "name": "Northwestern Polytechnical University",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Xi'an",
+        "addressCountry": "China"
+      }
+    }
+  ],
+  "knowsAbout": [
+    "Online Learning",
+    "Bandit Algorithms", 
+    "Game Theory",
+    "Computer Networks",
+    "Machine Learning",
+    "Computer Science"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Academic Researcher",
+    "occupationLocation": {
+      "@type": "Place",
+      "name": "University of Victoria"
+    }
+  }
+}
+</script>
+
 <div class="container-fluid px-4">
     <div class="container-xl">
     <!-- Profile and About Section -->
@@ -40,7 +95,7 @@
                             {% if article.position %}
                             <h2 class="h5 text-muted mb-4 fw-normal">{{ article.position }}</h2>
                             {% else %}
-                            <h2 class="h5 text-muted mb-4 fw-normal">PhD Candidate, University of Victoria, BC, Canada</h2>
+                            <h2 class="h5 text-muted mb-4 fw-normal">{{ ACADEMIC_TITLE }}, {{ ACADEMIC_POSITION }}</h2>
                             {% endif %}
                             
 
@@ -115,7 +170,7 @@
                                      title="Click to view full image">
                             </div>
                             <h1 class="h3 fw-bold mb-2">{{ AUTHOR }}</h1>
-                            <h2 class="h5 text-muted mb-4 fw-normal">PhD Candidate, University of Victoria, BC, Canada</h2>
+                            <h2 class="h5 text-muted mb-4 fw-normal">{{ ACADEMIC_TITLE }}, {{ ACADEMIC_POSITION }}</h2>
                         </div>
                         <div class="col-lg-7">
                             <div class="text-center">

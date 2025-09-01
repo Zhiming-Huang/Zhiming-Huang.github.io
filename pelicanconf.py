@@ -1,6 +1,20 @@
 AUTHOR = 'Zhiming Huang'
-SITENAME = "Zhiming's Page"
+SITENAME = "Zhiming Huang - Academic Researcher"
 SITEURL = ""
+
+# Academic Profile Settings
+ACADEMIC_TITLE = "PhD"  # PhD, PhD Candidate, Professor, etc.
+ACADEMIC_POSITION = "University of Victoria, BC, Canada"
+ACADEMIC_DEPARTMENT = "Computer Science"
+RESEARCH_INTERESTS = ["Online Learning", "Bandit Algorithms", "Game Theory", "Computer Networks", "Machine Learning"]
+
+# SEO Settings
+SITE_DESCRIPTION = f"{ACADEMIC_TITLE} in {ACADEMIC_DEPARTMENT} specializing in {', '.join(RESEARCH_INTERESTS[:3]).lower()} with applications to computer networks. University of Victoria researcher."
+SITE_KEYWORDS = f"{AUTHOR}, {ACADEMIC_DEPARTMENT.lower()}, {', '.join([interest.lower() for interest in RESEARCH_INTERESTS])}, University of Victoria, {ACADEMIC_TITLE.lower()} researcher"
+
+# Analytics (uncomment and add your tracking ID when ready)
+# GOOGLE_ANALYTICS = "G-XXXXXXXXXX"
+# GOOGLE_TAG_MANAGER = "GTM-XXXXXXX"
 
 PATH = "content"
 
@@ -45,14 +59,26 @@ ARTICLE_URL = 'posts/{slug}.html'
 ARTICLE_SAVE_AS = 'posts/{slug}.html'
 
 # Static paths
-STATIC_PATHS = ['images', 'files', 'extra/CNAME']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
+STATIC_PATHS = ['images', 'files', 'extra/CNAME', 'extra/robots.txt', 'extra/sitemap.xml']
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/sitemap.xml': {'path': 'sitemap.xml'}
+}
 
 DEFAULT_PAGINATION = False
 
 # Plugin configuration
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['publications_sync']
+
+# Template context variables
+EXTRA_CONTEXT = {
+    'ACADEMIC_TITLE': ACADEMIC_TITLE,
+    'ACADEMIC_POSITION': ACADEMIC_POSITION,
+    'ACADEMIC_DEPARTMENT': ACADEMIC_DEPARTMENT,
+    'RESEARCH_INTERESTS': RESEARCH_INTERESTS,
+}
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True

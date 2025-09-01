@@ -5,7 +5,7 @@ Template: index
 Profile_image: profile.jpeg
 Profile_image_caption: Photographed on May 11, 2024, in Victoria BC, Canada - Aurora
 Full_name: Zhiming Huang (黄之鸣)
-Position: University of Victoria, BC, Canada
+Position: PhD, University of Victoria, BC, Canada
 Google_scholar: https://scholar.google.com/citations?hl=zh-CN&user=CGFcFNUAAAAJ&view_op=list_works&sortby=pubdate
 Github: https://github.com/Zhiming-Huang
 Linkedin: https://linkedin.com/in/zhiminghuang

@@ -3,8 +3,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{% block description %}{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}{% endblock %}">
+    <meta name="description" content="{% block description %}{{ SITE_DESCRIPTION if SITE_DESCRIPTION else SITENAME }}{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}{{ SITE_KEYWORDS if SITE_KEYWORDS else '' }}{% endblock %}">
     <meta name="author" content="{{ AUTHOR }}">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="EN">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Academic/Scholar SEO -->
+    <meta name="citation_author" content="{{ AUTHOR }}">
+    <meta name="citation_title" content="{% block citation_title %}{{ SITENAME }}{% endblock %}">
+    <meta name="citation_author_institution" content="University of Victoria">
+    <meta name="DC.creator" content="{{ AUTHOR }}">
+    <meta name="DC.language" content="en">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.subject" content="{{ ACADEMIC_DEPARTMENT }}">
+    <meta name="DC.description" content="{{ SITE_DESCRIPTION }}">
     
     <title>{% block title %}{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}{% endblock %}</title>
     
@@ -22,20 +36,41 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
     
-    <!-- Meta tags -->
+    <!-- Open Graph / Social Media SEO -->
     {% if article %}
         <meta property="og:title" content="{{ article.title }}">
         <meta property="og:description" content="{{ article.summary|striptags|truncate(160) }}">
         <meta property="og:type" content="article">
+        <meta property="article:author" content="{{ AUTHOR }}">
     {% elif page %}
         <meta property="og:title" content="{{ page.title }} - {{ SITENAME }}">
-        <meta property="og:description" content="{{ page.summary|striptags|truncate(160) if page.summary else SITENAME }}">
+        <meta property="og:description" content="{{ page.summary|striptags|truncate(160) if page.summary else SITE_DESCRIPTION }}">
         <meta property="og:type" content="website">
     {% else %}
         <meta property="og:title" content="{{ SITENAME }}">
-        <meta property="og:description" content="{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}">
+        <meta property="og:description" content="{{ SITE_DESCRIPTION if SITE_DESCRIPTION else SITENAME }}">
         <meta property="og:type" content="website">
     {% endif %}
+    <meta property="og:url" content="{{ SITEURL }}{{ output_file if output_file else '' }}">
+    <meta property="og:site_name" content="{{ SITENAME }}">
+    <meta property="og:locale" content="en_US">
+    {% if SITEURL %}
+        <meta property="og:image" content="{{ SITEURL }}/images/profile.jpeg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="{{ AUTHOR }} - Academic Profile">
+    {% endif %}
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if page %}{{ page.title }} - {% endif %}{{ SITENAME }}">
+    <meta name="twitter:description" content="{% if page and page.summary %}{{ page.summary|striptags|truncate(160) }}{% else %}{{ SITE_DESCRIPTION }}{% endif %}">
+    {% if SITEURL %}
+        <meta name="twitter:image" content="{{ SITEURL }}/images/profile.jpeg">
+    {% endif %}
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ SITEURL }}{{ output_file if output_file else '' }}"?>
     
     {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />

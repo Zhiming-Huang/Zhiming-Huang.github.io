@@ -1,0 +1,33 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://zhiminghuang.me/sitemap.xml
+
+# Academic crawler specific permissions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: academic-bot
+Allow: /
+
+User-agent: scholar-bot
+Allow: /
+
+# Crawl delay for respectful indexing
+Crawl-delay: 1
+
+# Disallow certain file types that aren't meant for indexing
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.ppt$
+Disallow: /*.pptx$
+
+# Allow important academic files
+Allow: /files/cv*.pdf
+Allow: /files/*publication*.pdf
+Allow: /files/*paper*.pdf
