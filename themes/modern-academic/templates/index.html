@@ -193,50 +193,33 @@
     </section>
 
     <!-- News Section -->
-    <section class="py-2">
-        <div class="row justify-content-center">
-            <div class="col-lg-12 col-xl-10">
-                <div class="news-section">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <h2 class="h3 fw-semibold text-primary mb-0">News</h2>
-                        <button class="btn btn-outline-primary btn-sm" id="toggleNewsBtn">
-                            <span id="toggleNewsText">Show All</span>
-                            <i class="bi bi-chevron-down ms-1" id="toggleNewsIcon"></i>
-                        </button>
-                    </div>
-                    
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body">
-                            <div id="newsContent">
-                                <ul>
-                                    <li><strong>May 2025</strong>: Our paper on differentially private Thompson Sampling has been accepted by <strong>ICML 2025</strong></li>
-                                    <li><strong>Feb 2025</strong>: Our paper has been accepted by <strong>ACM MMSys 2025</strong></li>
-                                    <li><strong>Dec 2024</strong>: I am delighted to serve as a shadow TPC member for <strong>ACM CoNEXT 2025</strong></li>
-                                    <li><strong>Dec 2024</strong>: Two papers have been accepted by <strong>IEEE INFOCOM 2025</strong></li>
-                                    <li><strong>Nov 2024</strong>: Our paper has been accepted by <strong>IEEE TMC</strong></li>
-                                    <li><strong>Oct 2024</strong>: Our paper has been accepted by <strong>NeurIPS BDU Workshop 2024</strong></li>
-                                    <li><strong>Jul 2024</strong>: Our paper has been accepted by <strong>IEEE/ACM TON</strong></li>
-                                    <li><strong>Apr 2024</strong>: Our paper has been accepted by <strong>IEEE TPDS</strong></li>
-                                    <li><strong>Apr 2024</strong>: I have been awarded the <strong>British Columbia Graduate Award</strong></li>
-                                    <li><strong>Jan 2024</strong>: Our paper has been accepted by <strong>IEEE TNSE</strong></li>
-                                    <li><strong>Aug 2023</strong>: I have been awarded the <strong>President's Fellowship in Research-Enriched Teaching</strong></li>
-                                    <li><strong>April 2023</strong>: Our paper has been accepted by <strong>UAI 2023</strong></li>
-                                    <li><strong>April 2023</strong>: Our paper has been accepted by <strong>ICDCS 2023</strong></li>
-                                    <li><strong>Aug 2021</strong>: I have been selected as the <strong>IEEE Day Ambassador for IEEE Canada Region</strong></li>
-                                    <li><strong>July 2021</strong>: We received the <strong>Best Poster Award in ICDCS 2021</strong></li>
-                                    <li><strong>2020</strong>: Completed MSc in Computer Science at University of Victoria</li>
-                                    <li><strong>2018</strong>: Completed BEng in Communications Engineering at Northwestern Polytechnical University, Xi'an, China</li>
-                                    <li><strong>2017</strong>: Started research in computational methods and network applications</li>
-                                    <li><strong>2016</strong>: Received undergraduate research fellowship</li>
-                                    <li><strong>2015</strong>: Participated in international programming competition</li>
-                                </ul>
+    {% for article in articles %}
+        {% if article.title == 'News' %}
+        <section class="py-2">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-xl-10">
+                    <div class="news-section">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h2 class="h3 fw-semibold text-primary mb-0">News</h2>
+                            <button class="btn btn-outline-primary btn-sm" id="toggleNewsBtn">
+                                <span id="toggleNewsText">Show All</span>
+                                <i class="bi bi-chevron-down ms-1" id="toggleNewsIcon"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div id="newsContent">
+                                    {{ article.content }}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        {% endif %}
+    {% endfor %}
 
     <!-- Teaching Section -->
     {% for article in articles %}
