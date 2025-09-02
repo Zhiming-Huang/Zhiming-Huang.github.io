@@ -2,6 +2,7 @@ Title: News
 Date: 2024-01-01
 Category: News
 
+- **Aug 2025**: Completed PhD in Computer Science at University of Victoria!
 - **May 2025**: Our paper on differentially private Thompson Sampling has been accepted by **ICML 2025**
 - **Feb 2025**: Our paper has been accepted by **ACM MMSys 2025**
 - **Dec 2024**: I am delighted to serve as a shadow TPC member for **ACM CoNEXT 2025**
@@ -17,6 +18,6 @@ Category: News
 - **April 2023**: Our paper has been accepted by **ICDCS 2023**
 - **Aug 2021**: I have been selected as the **IEEE Day Ambassador for IEEE Canada Region**
 - **July 2021**: We received the **Best Poster Award in ICDCS 2021**
-- **2020**: Completed MSc in Computer Science at University of Victoria
-- **2018**: Completed BEng in Communications Engineering at Northwestern Polytechnical University, Xi'an, China
-- **2017**: Mitacs research internship at University of Victoria, BC, Canada
+- **2020**: Completed MSc in Computer Science at University of Victoria!
+- **2018**: Completed BEng in Communications Engineering at Northwestern Polytechnical University, Xi'an, China!
+- **2017**: Mitacs research internship at University of Victoria
