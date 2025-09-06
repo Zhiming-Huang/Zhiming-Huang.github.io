@@ -4,6 +4,16 @@ Slug: publications
 Template: publications
 
 Publications:
+  - title: "Swap-Regret-Minimizing Bandits for Distributed Network Optimization"
+    authors: "**Zhiming Huang**"
+    venue: "PhD Dissertation"
+    date: "2025-08"
+    type: "other"
+    status: "Published"
+    links:
+      - text: "PDF"
+        url: "Huang_Zhiming_PhD_2025.pdf"
+
   - title: "Connecting Thompson Sampling and UCB: Towards More Efficient Trade-offs Between Privacy and Regret"
     authors: "Bingshan Hu, **Zhiming Huang**, Tianyue H. Zhang, Mathias Lécuyer, Nidhi Hegde"
     venue: "International Conference on Machine Learning (ICML 2025)"
