@@ -120,7 +120,7 @@ Publications:
         url: "icdcs23.pdf"
 
   - title: "Poster: Multi-agent Combinatorial Bandits with Moving Arms"
-    authors: "**Zhiming Huang**, Jianping Pan"
+    authors: "**Zhiming Huang**, Bingshan Hu, Jianping Pan"
     venue: "IEEE International Conference on Distributed Computing Systems (ICDCS 2021)"
     date: "2021-07"
     type: "conference"
