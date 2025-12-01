@@ -21,8 +21,8 @@ Publications:
     type: "conference"
     status: "Published"
     links:
-      - text: "arXiv"
-        url: "https://arxiv.org/abs/2505.02383"
+      - text: "PDF"
+        url: "https://raw.githubusercontent.com/mlresearch/v267/main/assets/hu25k/hu25k.pdf"
 
   
   - title: "Faster Convergence for Unknown-Game Bandits"
