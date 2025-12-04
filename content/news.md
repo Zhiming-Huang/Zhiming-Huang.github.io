@@ -4,6 +4,7 @@ Category: News
 
 - **Aug 2025**: Completed PhD in Computer Science at University of Victoria!
 - **May 2025**: Our paper on differentially private Thompson Sampling has been accepted by **ICML 2025**
+- **May 2025**: I got NSERC Postdoctoral Fellowship!
 - **Feb 2025**: Our paper has been accepted by **ACM MMSys 2025**
 - **Dec 2024**: I am delighted to serve as a shadow TPC member for **ACM CoNEXT 2025**
 - **Dec 2024**: Two papers have been accepted by **IEEE INFOCOM 2025**
