@@ -1,7 +1,7 @@
 Title: News
 Date: 2024-01-01
 Category: News
-- **Dec 2025**: Two papers have been accepted by  **IEEE INFOCOM 2026**!
+- **Dec 2025**: Two papers have been accepted by  **IEEE INFOCOM 2026**
 - **Dec 2025**: Started Postdoc at Paul G. Allen School of Computer Science & Engineering!
 - **Aug 2025**: Completed PhD in Computer Science at University of Victoria!
 - **May 2025**: Our paper on differentially private Thompson Sampling has been accepted by **ICML 2025**
