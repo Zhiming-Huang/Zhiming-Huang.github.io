@@ -8,7 +8,7 @@ Publications:
     authors: "**Zhiming Huang**, Bingshan Hu, Jianping Pan"
     venue: "IEEE International Conference on Computer Communications (INFOCOM 2026)"
     date: "2026-05"
-    type: "other"
+    type: "conference"
     status: "Published"
     links:
       - text: "PDF"
@@ -17,7 +17,7 @@ Publications:
     authors: "Quanwei Zhang, **Zhiming Huang**, Jinwei Zhao, Ali Ahangarpour, Jianping Pan"
     venue: "IEEE International Conference on Computer Communications (INFOCOM 2026)"
     date: "2026-05"
-    type: "other"
+    type: "conference"
     status: "Published"
     links:
       - text: "PDF"
