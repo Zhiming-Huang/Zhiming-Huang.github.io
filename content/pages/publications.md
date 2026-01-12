@@ -4,6 +4,24 @@ Slug: publications
 Template: publications
 
 Publications:
+  - title: "Bridging the Regret Gap in Combinatorial Thompson Sampling: Worst-Case Guarantees and Algorithmic Refinement"
+    authors: "**Zhiming Huang**, Bingshan Hu, Jianping Pan"
+    venue: "IEEE International Conference on Computer Communications (INFOCOM 2026)"
+    date: "2026-05"
+    type: "other"
+    status: "Published"
+    links:
+      - text: "PDF"
+        url: "m82472-huang.pdf
+  - title: "Faster Exploration and Exploitation for Communication Environment Awareness in Starlink"
+    authors: "Quanwei Zhang, **Zhiming Huang**, Jinwei Zhao, Ali Ahangarpour, Jianping Pan"
+    venue: "IEEE International Conference on Computer Communications (INFOCOM 2026)"
+    date: "2026-05"
+    type: "other"
+    status: "Published"
+    links:
+      - text: "PDF"
+        url: "m82409-Zhang.pdf"
   - title: "Swap-Regret-Minimizing Bandits for Distributed Network Optimization"
     authors: "**Zhiming Huang**"
     venue: "PhD Dissertation"
