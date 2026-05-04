@@ -5,56 +5,70 @@
 {% block body_class %}home{% endblock %}
 
 {% block content %}
+{% set profile = articles[0] if articles else none %}
+{% set profile_name = profile.full_name if profile and profile.full_name else AUTHOR %}
+{% set profile_image = profile.profile_image if profile and profile.profile_image else DEFAULT_PROFILE_IMAGE %}
+{% set job_title = profile.job_title if profile and profile.job_title else ACADEMIC_TITLE %}
+{% set affiliation_name = profile.affiliation_name if profile and profile.affiliation_name else ACADEMIC_INSTITUTION %}
+{% set affiliation_city = profile.affiliation_city if profile and profile.affiliation_city else '' %}
+{% set affiliation_region = profile.affiliation_region if profile and profile.affiliation_region else '' %}
+{% set affiliation_country = profile.affiliation_country if profile and profile.affiliation_country else '' %}
+{% set profile_department = profile.department if profile and profile.department else ACADEMIC_DEPARTMENT %}
+{% set profile_description = profile.seo_description if profile and profile.seo_description else SITE_DESCRIPTION %}
+{% set profile_research_interests = profile.research_interests.split(';') if profile and profile.research_interests else RESEARCH_INTERESTS %}
+{% set occupation_name = profile.occupation_name if profile and profile.occupation_name else DEFAULT_OCCUPATION_NAME %}
+{% set same_as = [
+    profile.google_scholar if profile and profile.google_scholar else '',
+    profile.github if profile and profile.github else '',
+    profile.linkedin if profile and profile.linkedin else ''
+] %}
+{% set knows_about = profile_research_interests + [profile_department] %}
 <!-- JSON-LD Structured Data for Academic Profile -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "{{ AUTHOR }}",
-  "jobTitle": "PhD",
+  "name": {{ profile_name|tojson }},
+  "jobTitle": {{ job_title|tojson }},
   "affiliation": {
     "@type": "Organization",
-    "name": "University of Victoria",
+    "name": {{ affiliation_name|tojson }},
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Victoria",
-      "addressRegion": "BC",
-      "addressCountry": "Canada"
+      "addressLocality": {{ affiliation_city|tojson }},
+      "addressRegion": {{ affiliation_region|tojson }},
+      "addressCountry": {{ affiliation_country|tojson }}
     }
   },
-  "description": "{{ SITE_DESCRIPTION }}",
-  "url": "{{ SITEURL }}",
-  "image": "{{ SITEURL }}/images/profile.jpeg",
+  "description": {{ profile_description|tojson }},
+  "url": {{ SITEURL|tojson }},
+  "image": {{ (SITEURL ~ '/images/' ~ profile_image)|tojson }},
   "sameAs": [
-    {% if articles and articles[0].google_scholar %}"{{ articles[0].google_scholar }}",{% endif %}
-    {% if articles and articles[0].github %}"{{ articles[0].github }}",{% endif %}
-    {% if articles and articles[0].linkedin %}"{{ articles[0].linkedin }}"{% endif %}
+    {% for url in same_as if url %}
+    {{ url|tojson }}{% if not loop.last %},{% endif %}
+    {% endfor %}
   ],
   "alumniOf": [
+    {% if profile and profile.alumni_of %}
+    {% for school in profile.alumni_of.split(';') %}
     {
       "@type": "Organization",
-      "name": "Northwestern Polytechnical University",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Xi'an",
-        "addressCountry": "China"
-      }
-    }
+      "name": {{ school.strip()|tojson }}
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+    {% endif %}
   ],
   "knowsAbout": [
-    "Online Learning",
-    "Bandit Algorithms", 
-    "Game Theory",
-    "Computer Networks",
-    "Machine Learning",
-    "Computer Science"
+    {% for topic in knows_about %}
+    {{ topic.strip()|tojson }}{% if not loop.last %},{% endif %}
+    {% endfor %}
   ],
   "hasOccupation": {
     "@type": "Occupation",
-    "name": "Academic Researcher",
+    "name": {{ occupation_name|tojson }},
     "occupationLocation": {
       "@type": "Place",
-      "name": "University of Victoria"
+      "name": {{ affiliation_name|tojson }}
     }
   }
 }
@@ -161,7 +175,7 @@
                     <div class="row align-items-start">
                         <div class="col-lg-5 text-center mb-4 mb-lg-0">
                             <div class="mb-4">
-                                <img src="{{ SITEURL }}/images/profile.jpeg" 
+                                <img src="{{ SITEURL }}/images/{{ DEFAULT_PROFILE_IMAGE }}" 
                                      alt="{{ AUTHOR }}" 
                                      class="profile-image rounded-circle shadow-lg mx-auto d-block"
                                      style="width: 280px; height: 280px; object-fit: cover; border: 4px solid #ffffff; cursor: pointer;"
@@ -297,11 +311,10 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center p-4">
-                        <img src="{{ SITEURL }}/images/profile.jpeg" 
+                        <img src="{{ SITEURL }}/images/{{ DEFAULT_PROFILE_IMAGE }}" 
                              alt="{{ AUTHOR }}" 
                              class="img-fluid rounded shadow-sm"
                              style="max-height: 70vh; width: auto;">
-                        <p class="mt-3 text-muted fst-italic mb-0">Photographed on May 11, 2024, in Victoria BC, Canada - Aurora</p>
                     </div>
                 </div>
             </div>

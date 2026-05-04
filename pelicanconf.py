@@ -1,16 +1,22 @@
+from datetime import date
+
 AUTHOR = 'Zhiming Huang'
 SITENAME = "Zhiming's Page"
 SITEURL = ""
+COPYRIGHT_YEAR = date.today().year
+DEFAULT_PROFILE_IMAGE = "profile.jpeg"
+DEFAULT_OCCUPATION_NAME = "Academic Researcher"
 
 # Academic Profile Settings
-ACADEMIC_TITLE = "PhD"  # PhD, PhD Candidate, Professor, etc.
-ACADEMIC_POSITION = "University of Victoria, BC, Canada"
+ACADEMIC_TITLE = "Academic Researcher"  # Fallback when content/index.md has no Job_title
+ACADEMIC_POSITION = ""
+ACADEMIC_INSTITUTION = ""
 ACADEMIC_DEPARTMENT = "Computer Science"
-RESEARCH_INTERESTS = ["Online Learning", "Bandit Algorithms", "Game Theory", "Computer Networks", "Machine Learning"]
+RESEARCH_INTERESTS = []
 
 # SEO Settings
-SITE_DESCRIPTION = f"{ACADEMIC_TITLE} in {ACADEMIC_DEPARTMENT} specializing in {', '.join(RESEARCH_INTERESTS[:3]).lower()} with applications to computer networks. University of Victoria researcher."
-SITE_KEYWORDS = f"{AUTHOR}, {ACADEMIC_DEPARTMENT.lower()}, {', '.join([interest.lower() for interest in RESEARCH_INTERESTS])}, University of Victoria, {ACADEMIC_TITLE.lower()} researcher"
+SITE_DESCRIPTION = SITENAME
+SITE_KEYWORDS = AUTHOR
 
 # Analytics (uncomment and add your tracking ID when ready)
 # GOOGLE_ANALYTICS = "G-XXXXXXXXXX"
@@ -41,12 +47,8 @@ MENUITEMS = (
     ('Publications', '/pages/publications.html'),
 )
 
-# Social links - match the reference website
-SOCIAL = (
-    ('Google Scholar', 'https://scholar.google.com/citations?user=YOUR_USER_ID'),
-    ('GitHub', 'https://github.com/zhiminghuang'),
-    ('LinkedIn', 'https://linkedin.com/in/zhiminghuang'),
-)
+# Optional fallback social links. The footer uses content/index.md metadata first.
+SOCIAL = ()
 
 # Page settings
 PAGE_URL = 'pages/{slug}.html'
@@ -60,6 +62,7 @@ ARTICLE_SAVE_AS = 'posts/{slug}.html'
 
 # Static paths
 STATIC_PATHS = ['images', 'files', 'extra/CNAME', 'extra/robots.txt', 'extra/sitemap.xml']
+IGNORE_FILES = ['.#*', '.DS_Store']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/robots.txt': {'path': 'robots.txt'},
@@ -76,8 +79,12 @@ PLUGINS = ['publications_sync']
 EXTRA_CONTEXT = {
     'ACADEMIC_TITLE': ACADEMIC_TITLE,
     'ACADEMIC_POSITION': ACADEMIC_POSITION,
+    'ACADEMIC_INSTITUTION': ACADEMIC_INSTITUTION,
     'ACADEMIC_DEPARTMENT': ACADEMIC_DEPARTMENT,
     'RESEARCH_INTERESTS': RESEARCH_INTERESTS,
+    'COPYRIGHT_YEAR': COPYRIGHT_YEAR,
+    'DEFAULT_PROFILE_IMAGE': DEFAULT_PROFILE_IMAGE,
+    'DEFAULT_OCCUPATION_NAME': DEFAULT_OCCUPATION_NAME,
 }
 
 # Uncomment following line if you want document-relative URLs when developing

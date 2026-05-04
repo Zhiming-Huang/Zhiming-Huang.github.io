@@ -21,7 +21,7 @@ Publications:
     status: "Published"
     links:
       - text: "PDF"
-        url: "m82409-Zhang.pdf"
+        url: "m82409-zhang.pdf"
   - title: "Swap-Regret-Minimizing Bandits for Distributed Network Optimization"
     authors: "**Zhiming Huang**"
     venue: "PhD Dissertation"
@@ -75,7 +75,7 @@ Publications:
     authors: "**Zhiming Huang**, Bingshan Hu, Jianping Pan"
     venue: "NeurIPS 2024 Workshop on Bayesian Decision-making and Uncertainty"
     date: "2024-12"
-    type: "Conference"
+    type: "conference"
     status: "Presented"
     links:
       - text: "PDF"
@@ -154,7 +154,7 @@ Publications:
     authors: "**Zhiming Huang**, Yifan Xu, Jianping Pan"
     venue: "IEEE Transactions on Wireless Communications (TWC)"
     date: "2021-05"
-    type: "Journal"
+    type: "journal"
     status: "Published"
     links:
       - text: "IEEE"
@@ -164,7 +164,7 @@ Publications:
     authors: "**Zhiming Huang**, Bingshan Hu, Jianping Pan"
     venue: "IEEE Transactions on Wireless Communications (TWC)"
     date: "2020-11"
-    type: "Journal"
+    type: "journal"
     status: "Published"
     links:
       - text: "IEEE"
@@ -174,7 +174,7 @@ Publications:
     authors: "Rui Liu, Jun Song, **Zhiming Huang**, Jianping Pan"
     venue: "Journal of Computer Security"
     date: "2020-07"
-    type: "Journal"
+    type: "journal"
     status: "Published"
     links:
       - text: "PDF"
@@ -184,7 +184,7 @@ Publications:
     authors: "**Zhiming Huang**, Ruonan Zhang, Jianping Pan, Yi Jiang, Daosen Zhai"
     venue: "IEEE Transactions on Wireless Communications (TVT)"
     date: "2019-10"
-    type: "Journal"
+    type: "journal"
     status: "Published"
     links:
       - text: "IEEE"
@@ -194,10 +194,9 @@ Publications:
     authors: "Bingshan Hu, **Zhiming Huang**, Jianping Pan"
     venue: "IEEE International Conference on Distributed Computing Systems (ICDCS 2019)"
     date: "2019-07"
-    type: "Conference"
+    type: "conference"
     status: "Published"
     links:
       - text: "IEEE"
         url: "https://ieeexplore.ieee.org/document/8885049"
 # Publications
-

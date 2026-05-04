@@ -373,9 +373,9 @@ function performSearchAndFilter(publications, filter, searchTerm) {
     
     // Apply category filter first
     if (filter === 'journal') {
-        filtered = publications.filter(pub => pub.type === 'journal');
+        filtered = publications.filter(pub => (pub.type || '').toLowerCase() === 'journal');
     } else if (filter === 'conference') {
-        filtered = publications.filter(pub => pub.type === 'conference');
+        filtered = publications.filter(pub => (pub.type || '').toLowerCase() === 'conference');
     } else if (filter === 'in-progress') {
         filtered = publications.filter(pub => 
             pub.status === 'In Progress' || 
