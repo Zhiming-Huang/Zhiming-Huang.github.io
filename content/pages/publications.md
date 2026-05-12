@@ -13,6 +13,8 @@ Publications:
     links:
       - text: "PDF"
         url: "m82472-huang.pdf"
+      - text: "Extended Version"
+        url: "https://arxiv.org/abs/2605.09277"
   - title: "Faster Exploration and Exploitation for Communication Environment Awareness in Starlink"
     authors: "Quanwei Zhang, **Zhiming Huang**, Jinwei Zhao, Ali Ahangarpour, Jianping Pan"
     venue: "IEEE International Conference on Computer Communications (INFOCOM 2026)"
