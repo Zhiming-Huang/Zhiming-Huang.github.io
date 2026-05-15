@@ -1,6 +1,7 @@
 Title: News
 Date: 2024-01-01
 Category: News
+- **May 2026**: Check out our latest results on [instance-adaptive online multicalibration](https://arxiv.org/abs/2605.09273): our algorithm adapts to easy instances and obtains better rates while remaining worst-case minimax optimal. Joint with [Aaron Roth](https://www.cis.upenn.edu/~aaroth/), [Jamie Morgenstern](https://jamiemorgenstern.com/), and [Claire Jie Zhang](https://sites.google.com/view/claire-zhang)
 - **Dec 2025**: Two papers have been accepted by  **IEEE INFOCOM 2026**
 - **Dec 2025**: Started Postdoc at Paul G. Allen School of Computer Science & Engineering!
 - **Aug 2025**: Completed PhD in Computer Science at University of Victoria!
