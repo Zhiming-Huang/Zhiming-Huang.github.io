@@ -93,6 +93,8 @@ Publications:
     links:
       - text: "IEEE"
         url: "https://ieeexplore.ieee.org/document/10645817"
+      - text: "Corrected Version"
+        url: "SwapRegret_ToN%20%287%29.pdf"
       - text: "Github"
         url: "https://github.com/Zhiming-Huang/OMD-LCE-IX"
 
