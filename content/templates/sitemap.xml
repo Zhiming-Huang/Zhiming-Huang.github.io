@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>{{ SITEURL }}/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    {% for sitemap_page in pages|sort(attribute='slug') %}
+        {% if sitemap_page.sitemap|default('true')|lower not in ['false', 'no', '0', 'off'] %}
+    <url>
+        <loc>{{ SITEURL }}/{{ sitemap_page.url }}</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+        {% endif %}
+    {% endfor %}
+</urlset>

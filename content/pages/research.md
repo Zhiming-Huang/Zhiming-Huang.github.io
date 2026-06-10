@@ -2,6 +2,9 @@ Title: Research
 Date: 2024-01-01
 Slug: research
 Template: research
+Publish: false
+Menu: false
+Sitemap: false
 
 My research focuses on the following key topics.
 

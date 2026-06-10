@@ -2,6 +2,9 @@ Title: Publications
 Date: 2024-01-01
 Slug: publications
 Template: publications
+Menu: true
+Menu_order: 20
+Sitemap: true
 
 Publications:
   - title: "Bridging the Regret Gap in Combinatorial Thompson Sampling: Worst-Case Guarantees and Algorithmic Refinement"

@@ -117,6 +117,13 @@
                             <a class="nav-link fw-medium text-uppercase" href="{{ link }}" style="font-size: 0.75rem; letter-spacing: 0.5px;" data-nav-item="{{ title.lower() }}">{{ title }}</a>
                         </li>
                     {% endfor %}
+                    {% for menu_page in pages|sort(attribute='menu_order') %}
+                        {% if menu_page.menu|default('false')|lower in ['true', 'yes', '1'] %}
+                            <li class="nav-item">
+                                <a class="nav-link fw-medium text-uppercase" href="{{ SITEURL }}/{{ menu_page.url }}" style="font-size: 0.75rem; letter-spacing: 0.5px;" data-nav-item="{{ menu_page.slug }}">{{ menu_page.menu_title|default(menu_page.title) }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
                 </ul>
             </div>
             </div>

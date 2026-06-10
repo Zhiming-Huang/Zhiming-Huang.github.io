@@ -40,11 +40,9 @@ THEME = 'themes/modern-academic'
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 
-# Menu items - simplified structure
+# Static menu items. Page links are controlled by each page's Markdown metadata.
 MENUITEMS = (
     ('Home', '/'),
-    ('Research', '/pages/research.html'),
-    ('Publications', '/pages/publications.html'),
 )
 
 # Optional fallback social links. The footer uses content/index.md metadata first.
@@ -61,19 +59,19 @@ ARTICLE_URL = 'posts/{slug}.html'
 ARTICLE_SAVE_AS = 'posts/{slug}.html'
 
 # Static paths
-STATIC_PATHS = ['images', 'files', 'extra/CNAME', 'extra/robots.txt', 'extra/sitemap.xml']
+STATIC_PATHS = ['images', 'files', 'extra/CNAME', 'extra/robots.txt']
 IGNORE_FILES = ['.#*', '.DS_Store']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/sitemap.xml': {'path': 'sitemap.xml'}
 }
+TEMPLATE_PAGES = {'templates/sitemap.xml': 'sitemap.xml'}
 
 DEFAULT_PAGINATION = False
 
 # Plugin configuration
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['publications_sync']
+PLUGINS = ['publications_sync', 'page_visibility']
 
 # Template context variables
 EXTRA_CONTEXT = {
