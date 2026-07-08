@@ -203,9 +203,9 @@ function initializeNewsToggle() {
     if (newsItems.length === 0) return;
     
     let isExpanded = false;
-    const itemsToShow = 10;
+    const itemsToShow = 4;
     
-    // Initially hide items beyond the first 10
+    // Initially hide items beyond the first four
     function updateNewsDisplay() {
         newsItems.forEach((item, index) => {
             if (index >= itemsToShow && !isExpanded) {
@@ -224,7 +224,7 @@ function initializeNewsToggle() {
             toggleIcon.className = 'bi bi-chevron-down ms-1';
         }
         
-        // Hide button if there are 10 or fewer items
+        // Hide button if there are four or fewer items
         if (newsItems.length <= itemsToShow) {
             toggleBtn.style.display = 'none';
         }

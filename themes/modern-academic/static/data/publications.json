@@ -1,5 +1,20 @@
 [
   {
+    "title": "Instance-Adaptive Online Multicalibration",
+    "authors": "**Zhiming Huang**, Jamie Morgenstern, Aaron Roth, Claire Jie Zhang",
+    "author_note": "(α-β)",
+    "venue": "arXiv:2605.09273",
+    "date": "2026-05",
+    "type": "other",
+    "status": "Preprint",
+    "links": [
+      {
+        "text": "arXiv",
+        "url": "https://arxiv.org/abs/2605.09273"
+      }
+    ]
+  },
+  {
     "title": "Bridging the Regret Gap in Combinatorial Thompson Sampling: Worst-Case Guarantees and Algorithmic Refinement",
     "authors": "**Zhiming Huang**, Bingshan Hu, Jianping Pan",
     "venue": "IEEE International Conference on Computer Communications (INFOCOM 2026)",

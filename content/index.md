@@ -23,7 +23,8 @@ Linkedin: https://linkedin.com/in/zhiminghuang
 CV: cv_zm.pdf
 
 ## About
-I am currently a postdoctoral scholar at Paul G. Allen School of Computer Science & Engineering, University of Washington, WA, USA, advised by [Prof. Jamie Morgenstern](https://jamiemorgenstern.com/).
-I received my PhD (2025) and MSc (2020) in Computer Science from the University of Victoria, BC, Canada, under the supervision of [Prof. Jianping Pan](https://webhome.cs.uvic.ca/~pan/).
-Earlier, I earned my BEng in Communications Engineering in 2018. 
-My research focuses on online learning and game theory, with applications to computer networks.
+I am a postdoctoral scholar at the Paul G. Allen School of Computer Science & Engineering, University of Washington, advised by [Prof. Jamie Morgenstern](https://jamiemorgenstern.com/).
+
+My research develops online learning and game-theoretic methods for decision-making under limited feedback, with applications to computer networks and adaptive systems.
+
+I received my PhD in Computer Science from the University of Victoria, advised by [Prof. Jianping Pan](https://webhome.cs.uvic.ca/~pan/).

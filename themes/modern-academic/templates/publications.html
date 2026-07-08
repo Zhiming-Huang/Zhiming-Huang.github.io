@@ -15,6 +15,7 @@
                     <header class="text-center mb-5 pb-4 border-bottom">
                         <h1 class="display-5 fw-bold mb-3" style="color: var(--custom-text-heading);">{{ page.title }}</h1>
                         <p class="lead text-muted">Complete list of academic publications</p>
+                        <p class="publication-convention-note text-muted mb-0">For theory papers, (α-β) denotes alphabetical author order.</p>
                     </header>
                     
                     <!-- Filter Buttons with Integrated Search -->
@@ -241,7 +242,7 @@ function createPublicationCard(pub, index) {
             </div>
             
             <p class="text-muted mb-2">
-                <strong>Authors:</strong> ${processMarkdown(pub.authors)}
+                <strong>Authors:</strong> ${processMarkdown(pub.authors)}${pub.author_note ? ` <span class="publication-author-note">${pub.author_note}</span>` : ''}
             </p>
             
             <p class="text-muted mb-2">

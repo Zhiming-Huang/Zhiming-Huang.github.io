@@ -206,15 +206,15 @@
         </div>
     </section>
 
-    <!-- News Section -->
+    <!-- Recent Activity Section -->
     {% for article in articles %}
-        {% if article.title == 'News' %}
+        {% if article.title == 'News' or article.title == 'Recent Activity' %}
         <section class="py-2">
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-xl-10">
                     <div class="news-section">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h2 class="h3 fw-semibold text-primary mb-0">News</h2>
+                            <h2 class="h3 fw-semibold text-primary mb-0">Recent Activity</h2>
                             <button class="btn btn-outline-primary btn-sm" id="toggleNewsBtn">
                                 <span id="toggleNewsText">Show All</span>
                                 <i class="bi bi-chevron-down ms-1" id="toggleNewsIcon"></i>
@@ -235,48 +235,119 @@
         {% endif %}
     {% endfor %}
 
-    <!-- Teaching Section -->
-    {% for article in articles %}
-        {% if article.title == 'Teaching' %}
-        <section class="py-1">
-            <div class="row justify-content-center">
-                <div class="col-lg-12 col-xl-10">
-                    <h2 class="h3 fw-semibold text-primary mb-2">Teaching</h2>
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body">
-                            <div class="teaching-content">
-                                {{ article.content }}
-                            </div>
-                        </div>
-                    </div>
+    <!-- Recent Publications Section -->
+    <section class="py-2 recent-publications-section" id="recentPublicationsSection" hidden>
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-xl-10">
+                <div class="d-flex justify-content-between align-items-center mb-2 recent-publications-header">
+                    <h2 class="h3 fw-semibold text-primary mb-0">Recent Publications</h2>
+                    <a class="btn btn-outline-primary btn-sm" href="/pages/publications.html">
+                        View All
+                        <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
                 </div>
+                <div class="recent-publications-list" id="recentPublicationsList" aria-live="polite"></div>
             </div>
-        </section>
-        {% endif %}
-    {% endfor %}
+        </div>
+    </section>
 
-    <!-- Service Section -->
-    {% for article in articles %}
-        {% if article.title == 'Service' %}
-        <section class="py-1">
-            <div class="row justify-content-center">
-                <div class="col-lg-12 col-xl-10">
-                    <h2 class="h3 fw-semibold text-primary mb-2">Service</h2>
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body">
-                            <div class="service-content">
-                                {{ article.content }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        {% endif %}
-    {% endfor %}
+    <script>
+    (function() {
+        const section = document.getElementById('recentPublicationsSection');
+        const list = document.getElementById('recentPublicationsList');
 
+        if (!section || !list) return;
 
-    
+        const dataUrl = new URL('/theme/data/publications.json', window.location.href);
+        dataUrl.searchParams.set('v', Date.now().toString());
+        const hiddenStatuses = new Set(['In Progress', 'Under Review', 'Major Revision', 'Minor Revision']);
+
+        function formatPublicationDate(dateStr) {
+            if (!dateStr) return '';
+            const [year, month] = dateStr.split('-');
+            const names = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const monthName = names[Number(month) - 1];
+            return monthName ? `${monthName} ${year}` : year;
+        }
+
+        function compactVenue(venue) {
+            if (!venue) return '';
+            if (venue.startsWith('arXiv:')) return venue;
+
+            const parenthetical = venue.match(/\(([A-Z][A-Z0-9- ]+\s+\d{4})\)/);
+            if (parenthetical) return parenthetical[1].replace(/\s+/g, ' ').trim();
+
+            const shortVenue = venue.match(/\b([A-Z]{2,}(?:\/[A-Z]+)?(?:-[A-Z]+)?)(?:\s+|$)/);
+            return shortVenue ? shortVenue[1] : venue;
+        }
+
+        function resolvePublicationUrl(url) {
+            if (!url) return '';
+            if (/^(https?:|mailto:)/.test(url)) return url;
+            if (url.startsWith('/')) return new URL(url, window.location.href).toString();
+            if (!url.includes('/')) return new URL(`/files/${url}`, window.location.href).toString();
+            return new URL(`/${url.replace(/^\.?\//, '')}`, window.location.href).toString();
+        }
+
+        function renderPublication(pub) {
+            const item = document.createElement('article');
+            item.className = 'recent-publication-item';
+
+            const title = document.createElement('h3');
+            title.className = 'recent-publication-title';
+            title.textContent = pub.title || 'Untitled publication';
+            item.appendChild(title);
+
+            const metaParts = [compactVenue(pub.venue), formatPublicationDate(pub.date), pub.status].filter(Boolean);
+            if (metaParts.length) {
+                const meta = document.createElement('p');
+                meta.className = 'recent-publication-meta';
+                meta.textContent = metaParts.join(' · ');
+                item.appendChild(meta);
+            }
+
+            const links = Array.isArray(pub.links) ? pub.links.slice(0, 2) : [];
+            if (links.length) {
+                const linkWrap = document.createElement('div');
+                linkWrap.className = 'recent-publication-links';
+
+                links.forEach((link) => {
+                    const anchor = document.createElement('a');
+                    anchor.className = 'recent-publication-link';
+                    anchor.href = resolvePublicationUrl(link.url);
+                    anchor.target = '_blank';
+                    anchor.rel = 'noopener';
+                    anchor.textContent = link.text || 'Link';
+                    linkWrap.appendChild(anchor);
+                });
+
+                item.appendChild(linkWrap);
+            }
+
+            return item;
+        }
+
+        fetch(dataUrl)
+            .then((response) => {
+                if (!response.ok) throw new Error('Unable to load publications');
+                return response.json();
+            })
+            .then((publications) => {
+                const recent = publications
+                    .filter((pub) => !hiddenStatuses.has(pub.status))
+                    .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))
+                    .slice(0, 3);
+
+                if (!recent.length) return;
+                recent.forEach((pub) => list.appendChild(renderPublication(pub)));
+                section.hidden = false;
+            })
+            .catch(() => {
+                section.hidden = true;
+            });
+    })();
+    </script>
+
     <!-- Profile Image Modal -->
     {% if articles %}
         {% set article = articles[0] %}
