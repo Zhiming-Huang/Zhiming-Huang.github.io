@@ -20,7 +20,7 @@
                     
                     <!-- Filter Buttons with Integrated Search -->
                     <div class="text-center mb-5">
-                        <div class="filter-search-container position-relative">
+                        <div class="filter-search-container">
                             <!-- Filter Buttons -->
                             <div class="btn-group" role="group" aria-label="Publication filters" id="filter-buttons">
                                 <button type="button" class="btn btn-outline-primary active" id="filter-all">All</button>
@@ -33,7 +33,7 @@
                                 </button>
                             </div>
                             
-                            <!-- Expandable Search Box -->
+                            <!-- Expandable Search Panel -->
                             <div class="search-overlay" id="search-overlay" style="display: none;">
                                 <div class="search-container">
                                     <div class="input-group">
@@ -127,13 +127,6 @@ document.addEventListener('DOMContentLoaded', async function() {
             searchInput.focus();
         });
         
-        // Close search when clicking outside
-        document.addEventListener('click', (e) => {
-            if (searchExpanded && !searchOverlay.contains(e.target) && !searchToggle.contains(e.target)) {
-                closeSearchOverlay();
-            }
-        });
-        
         // Close search on Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && searchExpanded) {
@@ -164,16 +157,9 @@ document.addEventListener('DOMContentLoaded', async function() {
             const searchInput = document.getElementById('search-input');
             
             if (!searchExpanded) {
-                // Show search overlay
                 searchOverlay.style.display = 'block';
-                searchOverlay.classList.add('search-expanding');
                 searchExpanded = true;
-                
-                // Focus on search input after animation
-                setTimeout(() => {
-                    searchInput.focus();
-                    searchOverlay.classList.remove('search-expanding');
-                }, 300);
+                searchInput.focus();
             } else {
                 closeSearchOverlay();
             }
@@ -185,8 +171,6 @@ document.addEventListener('DOMContentLoaded', async function() {
             const searchResultsCount = document.getElementById('search-results-count');
             
             if (searchExpanded) {
-                searchOverlay.classList.add('search-collapsing');
-                
                 // Clear search if there's content
                 if (currentSearchTerm) {
                     searchInput.value = '';
@@ -195,11 +179,8 @@ document.addEventListener('DOMContentLoaded', async function() {
                     performSearchAndFilter(publications, currentFilter, currentSearchTerm);
                 }
                 
-                setTimeout(() => {
-                    searchOverlay.style.display = 'none';
-                    searchOverlay.classList.remove('search-collapsing');
-                    searchExpanded = false;
-                }, 300);
+                searchOverlay.style.display = 'none';
+                searchExpanded = false;
             }
         }
         
@@ -437,18 +418,19 @@ function updateSearchResultsCount(filteredCount, totalCount, searchTerm, filter)
 <style>
 /* Filter and Search Container */
 .filter-search-container {
-    display: inline-block;
-    min-width: 400px;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 0;
+    width: min(100%, 500px);
 }
 
-/* Search Overlay */
+/* Expandable search panel */
 .search-overlay {
-    position: absolute;
-    top: -1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 500px;
-    z-index: 1000;
+    margin-top: 1rem;
+    position: static;
+    transform: none;
+    width: 100%;
     
     /* Glass morphism effect */
     background: rgba(255, 255, 255, 0.85);
@@ -464,45 +446,6 @@ function updateSearchResultsCount(filteredCount, totalCount, searchTerm, filter)
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
     
     padding: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.search-overlay.search-expanding {
-    animation: expandSearch 0.3s ease;
-}
-
-.search-overlay.search-collapsing {
-    animation: collapseSearch 0.3s ease;
-}
-
-@keyframes expandSearch {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-30px) scale(0.9);
-        backdrop-filter: blur(0px);
-        -webkit-backdrop-filter: blur(0px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0) scale(1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-    }
-}
-
-@keyframes collapseSearch {
-    from {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0) scale(1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-30px) scale(0.9);
-        backdrop-filter: blur(0px);
-        -webkit-backdrop-filter: blur(0px);
-    }
 }
 
 /* Fallback for browsers that don't support backdrop-filter */
@@ -602,13 +545,8 @@ function updateSearchResultsCount(filteredCount, totalCount, searchTerm, filter)
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .search-overlay {
-        width: 90vw;
-        max-width: 400px;
-    }
-    
     .filter-search-container {
-        min-width: auto;
+        width: 100%;
     }
 }
 
