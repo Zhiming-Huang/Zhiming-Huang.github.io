@@ -139,30 +139,6 @@
     <footer class="bg-light py-5 mt-5">
         <div class="container">
             <div class="row justify-content-center text-center">
-                {% if social_links %}
-                <div class="col-12 mb-3">
-                    <div class="d-flex justify-content-center gap-3">
-                        {% for name, link in social_links %}
-                            {% if link %}
-                            <a href="{{ link }}" class="text-muted" aria-label="{{ name }}" target="_blank" rel="noopener">
-                                {% if name == 'GitHub' %}
-                                    <i class="bi bi-github fs-4"></i>
-                                {% elif name == 'LinkedIn' %}
-                                    <i class="bi bi-linkedin fs-4"></i>
-                                {% elif name == 'Google Scholar' %}
-                                    <i class="bi bi-mortarboard fs-4"></i>
-                                {% elif name == 'Email' %}
-                                    <i class="bi bi-envelope fs-4"></i>
-                                {% else %}
-                                    {{ name }}
-                                {% endif %}
-                            </a>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                </div>
-                {% endif %}
-
                 <div class="col-12">
                     <p class="text-muted mb-1">&copy; {{ COPYRIGHT_YEAR }} {{ AUTHOR }}. All rights reserved.</p>
                     <p class="text-muted small mb-0">Powered by <a href="https://getpelican.com/" target="_blank" rel="noopener" class="text-decoration-none">Pelican</a> & <a href="https://getbootstrap.com/" target="_blank" rel="noopener" class="text-decoration-none">Bootstrap</a></p>
