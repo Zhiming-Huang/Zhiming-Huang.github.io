@@ -17,7 +17,7 @@ Occupation_name: Academic Researcher
 Alumni_of: University of Victoria; Northwestern Polytechnical University
 Seo_description: Postdoc in Computer Science at University of Washington, specializing in online learning, bandit algorithms, game theory with applications to computer networks.
 Seo_keywords: Zhiming Huang, computer science, online learning, bandit algorithms, game theory, computer networks, machine learning, University of Washington, postdoctoral researcher
-Google_scholar: https://scholar.google.com/citations?hl=zh-CN&user=CGFcFNUAAAAJ&view_op=list_works&sortby=pubdate
+Google_scholar: https://scholar.google.com/citations?hl=en&user=CGFcFNUAAAAJ&view_op=list_works&sortby=pubdate
 Github: https://github.com/Zhiming-Huang
 Linkedin: https://linkedin.com/in/zhiminghuang
 CV: cv_zm.pdf
