@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Curriculum vitae of Zhiming Huang">
+    <title>Zhiming Huang - Curriculum Vitae</title>
+    <style>
+        :root {
+            --accent: #286687;
+            --ink: #17212b;
+            --muted: #5f6b76;
+            --rule: #d9e1e6;
+            --paper: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 13mm 15mm 12mm;
+
+            @bottom-center {
+                content: counter(page);
+                color: #7b8790;
+                font: 8pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+        }
+
+        html {
+            background: #edf1f3;
+        }
+
+        body {
+            width: 210mm;
+            margin: 24px auto;
+            padding: 13mm 15mm 12mm;
+            background: var(--paper);
+            box-shadow: 0 12px 36px rgb(25 43 56 / 12%);
+            color: var(--ink);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 9.2pt;
+            line-height: 1.34;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            margin-bottom: 5.5mm;
+            padding-bottom: 3.5mm;
+            border-bottom: 1.5pt solid var(--accent);
+        }
+
+        h1 {
+            margin: 0 0 1.6mm;
+            color: #102f40;
+            font-size: 25pt;
+            font-weight: 650;
+            letter-spacing: -0.6pt;
+            line-height: 1;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2mm 4mm;
+            color: var(--muted);
+            font-size: 8.7pt;
+        }
+
+        .contact a {
+            color: inherit;
+        }
+
+        .cv-section {
+            display: grid;
+            grid-template-columns: 29mm minmax(0, 1fr);
+            gap: 5.5mm;
+            margin: 0 0 4.3mm;
+        }
+
+        .cv-section > h2 {
+            margin: 0;
+            color: var(--accent);
+            font-size: 8.2pt;
+            font-weight: 700;
+            letter-spacing: 0.65pt;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+
+        .section-body {
+            min-width: 0;
+        }
+
+        .entry {
+            break-inside: avoid;
+            margin-bottom: 2.5mm;
+        }
+
+        .entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .entry-heading {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) max-content;
+            gap: 4mm;
+            align-items: baseline;
+        }
+
+        .entry-heading strong {
+            font-weight: 700;
+        }
+
+        time {
+            color: var(--muted);
+            font-size: 8.5pt;
+            white-space: nowrap;
+        }
+
+        ul.details {
+            margin: 0.7mm 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul.details li {
+            position: relative;
+            margin: 0.35mm 0;
+            padding-left: 3.6mm;
+        }
+
+        ul.details li::before {
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            content: "\25AA";
+        }
+
+        h3 {
+            margin: 0 0 1.6mm;
+            color: #243746;
+            font-size: 8.2pt;
+            font-weight: 700;
+            letter-spacing: 0.45pt;
+            text-transform: uppercase;
+            break-after: avoid;
+        }
+
+        h3:not(:first-child) {
+            margin-top: 2.5mm;
+        }
+
+        ol.publications {
+            margin: 0;
+            padding: 0;
+            counter-reset: publication;
+            list-style: none;
+        }
+
+        ol.publications li {
+            display: grid;
+            grid-template-columns: 5.5mm minmax(0, 1fr);
+            gap: 1.2mm;
+            margin-bottom: 1.45mm;
+            break-inside: avoid;
+            text-align: left;
+        }
+
+        ol.publications li::before {
+            color: var(--muted);
+            content: "[" counter(publication) "]";
+            counter-increment: publication;
+            font-variant-numeric: tabular-nums;
+            text-align: right;
+        }
+
+        .venue {
+            font-style: italic;
+        }
+
+        .compact .entry {
+            margin-bottom: 1.6mm;
+        }
+
+        .awards {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) max-content;
+            gap: 0.5mm 4mm;
+            margin: 0;
+        }
+
+        .awards dt,
+        .awards dd {
+            margin: 0;
+        }
+
+        .awards dt {
+            font-weight: 600;
+        }
+
+        .awards dd {
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        @media print {
+            html {
+                background: #ffffff;
+            }
+
+            body {
+                width: auto;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+
+            .journal-section {
+                break-before: page;
+            }
+        }
+
+        @media screen and (max-width: 760px) {
+            body {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                padding: 24px 20px;
+                box-shadow: none;
+                overflow-x: hidden;
+            }
+
+            .cv-section {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr);
+                width: 100%;
+            }
+
+            .cv-section > h2 {
+                margin-bottom: 2mm;
+            }
+
+            .section-body,
+            .entry,
+            ol.publications,
+            ol.publications li {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .entry-heading {
+                display: block;
+            }
+
+            time {
+                display: block;
+                margin-top: 0.4mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zhiming Huang</h1>
+        <div class="contact" aria-label="Contact links">
+            <a href="mailto:zhimingh@cs.washington.edu">zhimingh@cs.washington.edu</a>
+            <a href="https://zhiminghuang.me">zhiminghuang.me</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="cv-section">
+            <h2>Employment</h2>
+            <div class="section-body">
+                <div class="entry">
+                    <div class="entry-heading">
+                        <div><strong>Postdoc</strong> at Paul G. Allen School of Computer Science &amp; Engineering</div>
+                        <time>Dec 2025 - Now</time>
+                    </div>
+                    <ul class="details">
+                        <li><strong>University of Washington</strong>, WA, USA</li>
+                        <li>Advisor: Prof. Jamie Morgenstern</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Education</h2>
+            <div class="section-body">
+                <div class="entry">
+                    <div class="entry-heading">
+                        <strong>University of Victoria, BC, Canada</strong>
+                        <time>Sep 2018 - Aug 2025</time>
+                    </div>
+                    <ul class="details">
+                        <li><strong>Ph.D.</strong> in Computer Science (Aug 2020 - Aug 2025)</li>
+                        <li>Advisor: Prof. Jianping Pan</li>
+                        <li>Dissertation: <a href="https://zhiminghuang.me/files/Huang_Zhiming_PhD_2025.pdf">Swap-Regret-Minimizing Bandits for Distributed Network Optimization</a></li>
+                        <li><strong>M.Sc.</strong> in Computer Science (Sep 2018 - Aug 2020)</li>
+                        <li>Advisor: Prof. Jianping Pan</li>
+                        <li>Thesis: Thompson sampling-based online decision making in network routing</li>
+                    </ul>
+                </div>
+                <div class="entry">
+                    <div class="entry-heading">
+                        <strong>B.Eng. in Communication Engineering</strong>
+                        <time>Sep 2014 - Jun 2018</time>
+                    </div>
+                    <ul class="details">
+                        <li><strong>Northwestern Polytechnical University</strong>, Shaanxi, China</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Research Interests</h2>
+            <div class="section-body">
+                Online and game-theoretic learning for sequential decision-making under limited feedback, with applications to networking and distributed systems.
+            </div>
+        </section>
+
+        <section class="cv-section publications-section">
+            <h2>Publications</h2>
+            <div class="section-body">
+                <h3>Conference Publications</h3>
+                <ol class="publications">
+                    <li><span><strong>Z. Huang</strong>, B. Hu and J. Pan, Bridging the Regret Gap in Combinatorial Thompson Sampling: Worst-Case Guarantees and Algorithmic Refinement, <span class="venue">IEEE International Conference on Computer Communications (INFOCOM)</span>, May 2026.</span></li>
+                    <li><span>Q. Zhang, <strong>Z. Huang</strong>, J. Zhao, A. Ahangarpour and J. Pan, Faster Exploration and Exploitation for Communication Environment Awareness in Starlink, <span class="venue">IEEE International Conference on Computer Communications (INFOCOM)</span>, May 2026.</span></li>
+                    <li><span><strong>Z. Huang</strong> and J. Pan, Faster Convergence for Unknown-game Bandits, <span class="venue">IEEE International Conference on Computer Communications (INFOCOM)</span>, May 2025.</span></li>
+                    <li><span><strong>Z. Huang</strong> and J. Pan, Adversarial Semi-Bandits with Moving Arms, <span class="venue">IEEE International Conference on Computer Communications (INFOCOM)</span>, May 2025.</span></li>
+                    <li><span>B. Hu, <strong>Z. Huang</strong>, T. Zhang, M. L&eacute;cuyer and N. Hegde, Connecting Thompson Sampling and UCB: Towards More Efficient Trade-offs Between Privacy and Regret, <span class="venue">International Conference on Machine Learning (ICML)</span>, May 2025.</span></li>
+                    <li><span>Q. Zhang, <strong>Z. Huang</strong>, J. Zhao, and J. Pan, A Congestion Control Test Suite for Real-Time Communication, <span class="venue">ACM Multimedia Systems Conference (MMSys)</span>, Apr 2025.</span></li>
+                    <li><span><strong>Z. Huang</strong>, B. Hu, and J. Pan, Gaussian Randomized Exploration for Semi-bandits with Sleeping Arms, <span class="venue">NeurIPS 2024 Workshop on Bayesian Decision-making and Uncertainty</span>, Dec 2024.</span></li>
+                    <li><span>F. Amri, <strong>Z. Huang</strong>, K. Liu, and J. Pan, Energy-aware Inter-data Center VM Migration over Elastic Optical Networks, <span class="venue">IEEE International Conference on Communication (Globecom)</span>, Dec 2023.</span></li>
+                    <li><span><strong>Z. Huang</strong> and J. Pan, A Near-optimal High-probability Swap-Regret Upper Bound for Multi-agent Bandits in Unknown General-sum Games, <span class="venue">Uncertainty of Artificial Intelligence (UAI)</span>, Aug 2023.</span></li>
+                    <li><span><strong>Z. Huang</strong>, K. Liu and J. Pan, End-to-end Congestion Control as Learning for Unknown Games, <span class="venue">IEEE International Conference on Distributed Computing Systems (ICDCS)</span>, Jul 2023.</span></li>
+                    <li><span><strong>Z. Huang</strong>, B. Hu, and J. Pan, Poster: Multi-agent Combinatorial Bandits with Moving Arms, <span class="venue">IEEE International Conference on Distributed Computing Systems (ICDCS)</span>, Jul 2021.</span></li>
+                    <li><span>B. Hu, Y. Chen, <strong>Z. Huang</strong>, N. Mehta, and J. Pan, Intelligent Caching Algorithms in Heterogeneous Wireless Networks with Uncertainty, <span class="venue">IEEE International Conference on Distributed Computing Systems (ICDCS)</span>, Jul 2019.</span></li>
+                    <li><span>R. Liu, J. Song, <strong>Z. Huang</strong>, and J. Pan, EQRC: An Enhanced QR Code-based Secure E-coupon Transaction Framework, <span class="venue">IEEE International Conference on Communication (ICC)</span>, May 2019.</span></li>
+                </ol>
+
+            </div>
+        </section>
+
+        <section class="cv-section journal-section">
+            <h2>Publications</h2>
+            <div class="section-body">
+                <h3>Journal Publications</h3>
+                <ol class="publications">
+                    <li><span>W. Yang, L. Cai, S. Shu, A. Sepahi, <strong>Z. Huang</strong> and J. Pan, QoS-driven Contextual MAB for MPQUIC Supporting Video Streaming in Mobile Networks, <span class="venue">IEEE Transactions on Mobile Computing (TMC)</span>, Nov 2024.</span></li>
+                    <li><span><strong>Z. Huang</strong> and J. Pan, Game-theoretic Bandits for Network Optimization with High-probability Swap-regret Upper Bounds, <span class="venue">IEEE/ACM Transactions on Networking (TON)</span>, Jul 2024.</span></li>
+                    <li><span>B. Hu, <strong>Z. Huang</strong>, N. Mehta, and N. Hegde, Near-Optimal Algorithms for Differentially Private Online Learning in a Stochastic Environment, <span class="venue">arXiv</span>, Jul 2024.</span></li>
+                    <li><span>K. Liu, J. Wang, <strong>Z. Huang</strong>, and J. Pan, Sampling-based Job Placement and Load Balancing for Heterogeneous Deep Learning Clusters, <span class="venue">IEEE Transactions on Parallel and Distributed Systems (TPDS)</span>, Apr 2024.</span></li>
+                    <li><span><strong>Z. Huang</strong> and J. Pan, Distributed Learning of Unknown Games for HetNet Selection, <span class="venue">IEEE Transactions on Network Science and Engineering (TNSE)</span>, Jan 2024.</span></li>
+                    <li><span><strong>Z. Huang</strong>, Y. Xu, and J. Pan, TSOR: Thompson Sampling-based Opportunistic Routing, <span class="venue">IEEE Transactions on Wireless Communications (TWC)</span>, vol. 20, no. 11, pp. 7272-7285, May 2021.</span></li>
+                    <li><span><strong>Z. Huang</strong>, B. Hu, and J. Pan, Caching by User Preference with Delayed Feedback for Heterogeneous Cellular Networks, <span class="venue">IEEE Transactions on Wireless Communications (TWC)</span>, vol. 20, no. 3, pp. 1655-1667, Mar 2021.</span></li>
+                    <li><span>R. Liu, J. Song, <strong>Z. Huang</strong>, and J. Pan, EQRC: A Secure QR Code-based E-coupon Framework Supporting Online and Offline Transactions, <span class="venue">Journal of Computer Security (JCS)</span>, vol. 28, no. 5, pp. 577-605, Sep 2020.</span></li>
+                    <li><span><strong>Z. Huang</strong>, R. Zhang, J. Pan, Y. Jiang, and D. Zhai, A Framework of Multipath Clustering based on Space Transformed Fuzzy c-Means and Data Fusion for Radio Channel Modeling, <span class="venue">IEEE Transactions on Vehicular Technology (TVT)</span>, vol. 69, no. 1, pp. 4-15, Jan 2019.</span></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="cv-section compact">
+            <h2>Teaching Experience</h2>
+            <div class="section-body">
+                <div class="entry">
+                    <h3>Instructor</h3>
+                    <div class="entry-heading">
+                        <strong>CSC111: Fundamentals of Programming with Engineering Applications</strong>
+                        <time>Spring 2024</time>
+                    </div>
+                </div>
+                <div class="entry">
+                    <h3>Teaching Assistant</h3>
+                    <ul class="details">
+                        <li><strong>Lab and Tutorial Instructor for CSC361: Computer Communication and Networks</strong></li>
+                        <li><strong>Tutorial Instructor for CSC360: Introduction to Operating Systems</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section compact">
+            <h2>Professional Activities</h2>
+            <div class="section-body">
+                <div class="entry">
+                    <h3>Program Committee</h3>
+                    <ul class="details">
+                        <li>Shadow TPC member for ACM CoNEXT 2025</li>
+                    </ul>
+                </div>
+                <div class="entry">
+                    <h3>Reviewer</h3>
+                    <ul class="details">
+                        <li>IEEE Transactions on Wireless Communications</li>
+                        <li>IEEE Transactions on Intelligent Transportation Systems</li>
+                        <li>IEEE Transactions on Artificial Intelligence</li>
+                        <li>IEEE Transactions on Signal Processing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-section">
+            <h2>Awards &amp; Scholarships</h2>
+            <div class="section-body">
+                <dl class="awards">
+                    <dt>Canada NSERC Postdoctoral Fellowship</dt><dd>2025</dd>
+                    <dt>IEEE INFOCOM 2025 Travel Award</dt><dd>2025</dd>
+                    <dt>British Columbia Graduate Scholarship</dt><dd>2024</dd>
+                    <dt>UVic President's Fellowship in Research-enriched Teaching</dt><dd>2023</dd>
+                    <dt>ICDCS 2023 Travel Award</dt><dd>2023</dd>
+                    <dt>UAI 2023 Scholarships</dt><dd>2023</dd>
+                    <dt>Melva J. Hanson Graduate Scholarship</dt><dd>2022</dd>
+                    <dt>IEEE ICDCS 2021 Best Poster Award</dt><dd>2021</dd>
+                    <dt>Howard E. Petch Research Scholarship</dt><dd>2020</dd>
+                </dl>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

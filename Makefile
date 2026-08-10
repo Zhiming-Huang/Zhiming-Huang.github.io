@@ -72,9 +72,14 @@ devserver-global:
 publish:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
+cv:
+	mkdir -p "$(OUTPUTDIR)/pdf"
+	npx --yes @vivliostyle/cli@11.1.0 build "$(INPUTDIR)/files/cv.html" -o "$(OUTPUTDIR)/pdf/cv-html.pdf"
+	cp "$(OUTPUTDIR)/pdf/cv-html.pdf" "$(INPUTDIR)/files/cv_zm.pdf"
+
 github: publish
 	ghp-import -m "$(GITHUB_PAGES_COMMIT_MESSAGE)" -b $(GITHUB_PAGES_BRANCH) "$(OUTPUTDIR)" --no-jekyll
 	git push origin $(GITHUB_PAGES_BRANCH)
 
 
-.PHONY: html help clean regenerate serve serve-global devserver devserver-global publish github
+.PHONY: html help clean regenerate serve serve-global devserver devserver-global publish cv github

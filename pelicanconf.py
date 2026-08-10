@@ -60,6 +60,7 @@ ARTICLE_SAVE_AS = 'posts/{slug}.html'
 
 # Static paths
 STATIC_PATHS = ['images', 'files', 'extra/CNAME', 'extra/robots.txt']
+READERS = {'html': None}
 IGNORE_FILES = ['.#*', '.DS_Store']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
