@@ -20,7 +20,7 @@ Seo_keywords: Zhiming Huang, computer science, online learning, bandit algorithm
 Google_scholar: https://scholar.google.com/citations?hl=en&user=CGFcFNUAAAAJ&view_op=list_works&sortby=pubdate
 Github: https://github.com/Zhiming-Huang
 Linkedin: https://linkedin.com/in/zhiminghuang
-CV: cv_zm.pdf?v=1ff5a20d
+CV: cv.html
 
 ## About
 I am a postdoctoral scholar at the Paul G. Allen School of Computer Science & Engineering, University of Washington, advised by [Prof. Jamie Morgenstern](https://jamiemorgenstern.com/).
