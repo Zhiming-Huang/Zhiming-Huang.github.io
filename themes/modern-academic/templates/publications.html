@@ -26,7 +26,7 @@
                                 <button type="button" class="btn btn-outline-primary active" id="filter-all">All</button>
                                 <button type="button" class="btn btn-outline-primary" id="filter-journal">Journal</button>
                                 <button type="button" class="btn btn-outline-primary" id="filter-conference">Conference</button>
-                                <button type="button" class="btn btn-outline-primary" id="filter-in-progress">In Progress</button>
+                                <button type="button" class="btn btn-outline-primary" id="filter-preprint">Preprint</button>
                                 <!-- Search Toggle Button -->
                                 <button type="button" class="btn btn-outline-secondary" id="search-toggle" title="Search publications">
                                     <i class="bi bi-search"></i>
@@ -147,9 +147,9 @@ document.addEventListener('DOMContentLoaded', async function() {
             currentFilter = 'conference';
             filterPublications(publications, 'conference', currentSearchTerm);
         });
-        document.getElementById('filter-in-progress').addEventListener('click', () => {
-            currentFilter = 'in-progress';
-            filterPublications(publications, 'in-progress', currentSearchTerm);
+        document.getElementById('filter-preprint').addEventListener('click', () => {
+            currentFilter = 'preprint';
+            filterPublications(publications, 'preprint', currentSearchTerm);
         });
         
         function toggleSearchOverlay() {
@@ -358,12 +358,8 @@ function performSearchAndFilter(publications, filter, searchTerm) {
         filtered = publications.filter(pub => (pub.type || '').toLowerCase() === 'journal');
     } else if (filter === 'conference') {
         filtered = publications.filter(pub => (pub.type || '').toLowerCase() === 'conference');
-    } else if (filter === 'in-progress') {
-        filtered = publications.filter(pub => 
-            pub.status === 'In Progress' || 
-            pub.status === 'Under Review' || 
-            pub.status.includes('Revision')
-        );
+    } else if (filter === 'preprint') {
+        filtered = publications.filter(pub => pub.status === 'Preprint');
     }
     
     // Apply search filter
@@ -392,8 +388,7 @@ function updateSearchResultsCount(filteredCount, totalCount, searchTerm, filter)
     if (searchTerm && searchTerm.length > 0) {
         let message = `Found ${filteredCount} publication${filteredCount !== 1 ? 's' : ''}`;
         if (filter !== 'all') {
-            const filterName = filter === 'in-progress' ? 'in progress' : filter;
-            message += ` in ${filterName} category`;
+            message += ` in ${filter} category`;
         }
         message += ` matching "${searchTerm}"`;
         
