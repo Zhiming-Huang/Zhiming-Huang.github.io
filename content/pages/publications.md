@@ -140,8 +140,12 @@ Publications:
     type: "conference"
     status: "Published"
     links:
-      - text: "PDF"
-        url: "https://example.com/paper10.pdf"
+      - text: "Corrected PDF + Supplement"
+        url: "huang23b-corrected-with-supplement.pdf"
+        type: "full"
+      - text: "PMLR"
+        url: "https://proceedings.mlr.press/v216/huang23b.html"
+        type: "publisher"
 
   - title: "End-to-end Congestion Control as Learning for Unknown Games with Bandit Feedback"
     authors: "**Zhiming Huang**, Kaiyang Liu, Jianping Pan"
