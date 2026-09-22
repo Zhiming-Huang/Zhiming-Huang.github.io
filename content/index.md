@@ -25,6 +25,6 @@ CV: cv.html
 ## About
 I am a postdoctoral scholar at the Paul G. Allen School of Computer Science & Engineering, University of Washington, advised by [Prof. Jamie Morgenstern](https://jamiemorgenstern.com/).
 
-My research develops online learning and game-theoretic methods for decision-making under limited feedback, with applications to computer networks and adaptive systems.
-
 I received my PhD in Computer Science from the University of Victoria, advised by [Prof. Jianping Pan](https://webhome.cs.uvic.ca/~pan/).
+
+My research develops online learning and game-theoretic methods for decision-making under limited feedback, with applications to computer networks and adaptive systems.
