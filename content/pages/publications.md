@@ -10,7 +10,7 @@ Publications:
   - title: "Instance-Adaptive Online Multicalibration"
     authors: "**Zhiming Huang**, Jamie Morgenstern, Aaron Roth, Claire Jie Zhang"
     author_note: "(α-β)"
-    venue: "Conference on Neural Information Processing Systems (NeurIPS 2026)"
+    venue: "NeurIPS 2026"
     date: "2026-12"
     type: "conference"
     status: "Accepted"
