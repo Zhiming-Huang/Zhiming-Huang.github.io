@@ -270,17 +270,6 @@
             return monthName ? `${monthName} ${year}` : year;
         }
 
-        function compactVenue(venue) {
-            if (!venue) return '';
-            if (venue.startsWith('arXiv:')) return venue;
-
-            const parenthetical = venue.match(/\(([A-Z][A-Z0-9- ]+\s+\d{4})\)/);
-            if (parenthetical) return parenthetical[1].replace(/\s+/g, ' ').trim();
-
-            const shortVenue = venue.match(/\b([A-Z]{2,}(?:\/[A-Z]+)?(?:-[A-Z]+)?)(?:\s+|$)/);
-            return shortVenue ? shortVenue[1] : venue;
-        }
-
         function resolvePublicationUrl(url) {
             if (!url) return '';
             if (/^(https?:|mailto:)/.test(url)) return url;
@@ -298,7 +287,7 @@
             title.textContent = pub.title || 'Untitled publication';
             item.appendChild(title);
 
-            const metaParts = [compactVenue(pub.venue), formatPublicationDate(pub.date), pub.status].filter(Boolean);
+            const metaParts = [pub.venue_short || pub.venue, formatPublicationDate(pub.date), pub.status].filter(Boolean);
             if (metaParts.length) {
                 const meta = document.createElement('p');
                 meta.className = 'recent-publication-meta';

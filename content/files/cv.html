@@ -107,7 +107,8 @@
             margin: 0 0 4.3mm;
         }
 
-        .cv-section > h2 {
+        .cv-section > h2,
+        .section-label > h2 {
             margin: 0;
             color: var(--accent);
             font-size: 8.2pt;
@@ -245,6 +246,10 @@
                 box-shadow: none;
             }
 
+            .publications-section ol.publications li {
+                margin-bottom: 0.4mm;
+            }
+
             .journal-section {
                 break-before: page;
             }
@@ -310,7 +315,7 @@
             <a href="mailto:zhimingh@cs.washington.edu">zhimingh@cs.washington.edu</a>
             <a href="https://zhiminghuang.me">zhiminghuang.me</a>
         </div>
-        <a class="pdf-download" href="cv_zm.pdf?v=1ff5a20d" download>Download PDF</a>
+        <a class="pdf-download" href="cv_zm.pdf?v=071becf9" download>Download PDF</a>
     </header>
 
     <main>
@@ -344,7 +349,7 @@
                         <li>Dissertation: <a href="https://zhiminghuang.me/files/Huang_Zhiming_PhD_2025.pdf">Swap-Regret-Minimizing Bandits for Distributed Network Optimization</a></li>
                         <li><strong>M.Sc.</strong> in Computer Science (Sep 2018 - Aug 2020)</li>
                         <li>Advisor: Prof. Jianping Pan</li>
-                        <li>Thesis: Thompson sampling-based online decision making in network routing</li>
+                        <li>Thesis: <a href="https://hdl.handle.net/1828/12095">Thompson sampling-based online decision making in network routing</a></li>
                     </ul>
                 </div>
                 <div class="entry">
@@ -367,10 +372,14 @@
         </section>
 
         <section class="cv-section publications-section">
-            <h2>Publications</h2>
+            <div class="section-label">
+                <h2>Publications</h2>
+                <p style="margin: 2mm 0 0; color: var(--muted); font-size: 8.2pt;">(&alpha;-&beta;) denotes alphabetical author order.</p>
+            </div>
             <div class="section-body">
                 <h3>Conference Publications</h3>
                 <ol class="publications">
+                    <li><span><strong>Z. Huang</strong>, J. Morgenstern, A. Roth and C. J. Zhang (&alpha;-&beta;), Instance-Adaptive Online Multicalibration, <span class="venue">Advances in Neural Information Processing Systems (NeurIPS 2026)</span>, accepted.</span></li>
                     <li><span><strong>Z. Huang</strong>, B. Hu and J. Pan, Bridging the Regret Gap in Combinatorial Thompson Sampling: Worst-Case Guarantees and Algorithmic Refinement, <span class="venue">IEEE International Conference on Computer Communications (INFOCOM)</span>, May 2026.</span></li>
                     <li><span>Q. Zhang, <strong>Z. Huang</strong>, J. Zhao, A. Ahangarpour and J. Pan, Faster Exploration and Exploitation for Communication Environment Awareness in Starlink, <span class="venue">IEEE International Conference on Computer Communications (INFOCOM)</span>, May 2026.</span></li>
                     <li><span><strong>Z. Huang</strong> and J. Pan, Faster Convergence for Unknown-game Bandits, <span class="venue">IEEE International Conference on Computer Communications (INFOCOM)</span>, May 2025.</span></li>

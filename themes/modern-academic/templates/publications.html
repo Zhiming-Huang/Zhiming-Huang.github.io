@@ -368,7 +368,7 @@ function performSearchAndFilter(publications, filter, searchTerm) {
         filtered = filtered.filter(pub => {
             const titleMatch = pub.title && pub.title.toLowerCase().includes(searchTermLower);
             const authorsMatch = pub.authors && pub.authors.toLowerCase().includes(searchTermLower);
-            const venueMatch = pub.venue && pub.venue.toLowerCase().includes(searchTermLower);
+            const venueMatch = [pub.venue, pub.venue_short].some(venue => venue && venue.toLowerCase().includes(searchTermLower));
             const typeMatch = pub.type && pub.type.toLowerCase().includes(searchTermLower);
             const statusMatch = pub.status && pub.status.toLowerCase().includes(searchTermLower);
             
