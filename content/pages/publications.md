@@ -7,6 +7,18 @@ Menu_order: 20
 Sitemap: true
 
 Publications:
+  - title: "Instance-Adaptive Online Multiclass Multicalibration"
+    authors: "**Zhiming Huang**, Jamie Morgenstern, Aaron Roth, Claire Jie Zhang"
+    author_note: "(α-β)"
+    venue: "arXiv:2610.15954"
+    venue_short: "arXiv:2610.15954"
+    date: "2026-10"
+    type: "preprint"
+    status: "Preprint"
+    links:
+      - text: "arXiv"
+        url: "https://arxiv.org/abs/2610.15954"
+
   - title: "Instance-Adaptive Online Multicalibration"
     authors: "**Zhiming Huang**, Jamie Morgenstern, Aaron Roth, Claire Jie Zhang"
     author_note: "(α-β)"

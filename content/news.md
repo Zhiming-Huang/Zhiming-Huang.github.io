@@ -1,8 +1,9 @@
 Title: Recent Activity
 Date: 2024-01-01
 Category: Recent Activity
+- **Oct 2026**: Check out our new preprint on [instance-adaptive online multiclass multicalibration](https://arxiv.org/abs/2610.15954): our algorithm adapts to low-dimensional structure in the outcome means, without knowing the subspace or its dimension in advance. Joint with [Jamie Morgenstern](https://jamiemorgenstern.com/), [Aaron Roth](https://www.cis.upenn.edu/~aaroth/), and [Claire Jie Zhang](https://sites.google.com/view/claire-zhang).
 - **Sep 2026**: [Instance-Adaptive Online Multicalibration](https://arxiv.org/abs/2605.09273) has been accepted to **NeurIPS 2026**.
-- **May 2026**: Check out our latest results on [instance-adaptive online multicalibration](https://arxiv.org/abs/2605.09273): our algorithm adapts to easy instances and obtains better rates while remaining worst-case minimax optimal. Joint with [Aaron Roth](https://www.cis.upenn.edu/~aaroth/), [Jamie Morgenstern](https://jamiemorgenstern.com/), and [Claire Jie Zhang](https://sites.google.com/view/claire-zhang)
+- **May 2026**: Check out our latest results on [instance-adaptive online multicalibration](https://arxiv.org/abs/2605.09273): our algorithm adapts to easy instances and obtains better rates while remaining worst-case minimax optimal. Joint with [Jamie Morgenstern](https://jamiemorgenstern.com/), [Aaron Roth](https://www.cis.upenn.edu/~aaroth/), and [Claire Jie Zhang](https://sites.google.com/view/claire-zhang).
 - **Dec 2025**: Two papers have been accepted by  **IEEE INFOCOM 2026**
 - **Dec 2025**: Started Postdoc at Paul G. Allen School of Computer Science & Engineering!
 - **Aug 2025**: Completed PhD in Computer Science at University of Victoria!
