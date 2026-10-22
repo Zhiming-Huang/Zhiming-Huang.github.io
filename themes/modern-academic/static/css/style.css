@@ -414,6 +414,90 @@ section:has(.card) {
     font-weight: 600;
 }
 
+/* Social links styling */
+.social-icons {
+    margin: 1.5rem 0;
+}
+
+/* Social links in About section */
+.profile-about-section .social-icons {
+    margin: 2rem 0 0 0;
+    justify-content: center !important;
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    clear: both;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--custom-primary) 0%, var(--custom-text-heading) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.social-link:hover::before {
+    opacity: 0.1;
+}
+
+.social-link:hover {
+    color: var(--custom-primary) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.social-link i {
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.social-link:hover i {
+    transform: scale(1.1);
+}
+
+/* Specific social platform colors on hover */
+.social-link[title="Google Scholar"]:hover {
+    color: #4285f4 !important;
+}
+
+.social-link[title="GitHub"]:hover {
+    color: #333 !important;
+}
+
+.social-link[title="LinkedIn"]:hover {
+    color: #0077b5 !important;
+}
+
+/* Footer social links styling */
+footer .bi {
+    transition: all 0.3s ease;
+}
+
+footer a:hover .bi {
+    color: var(--custom-primary) !important;
+    transform: translateY(-2px);
+}
+
 /* 响应式设计 - 全面覆盖各种屏幕尺寸 */
 
 /* 超宽屏幕 (1400px+) - 4K显示器等 */
@@ -801,11 +885,30 @@ section:has(.card) {
         margin-bottom: 1.5rem !important;
     }
     
+    /* Social links mobile adjustments */
+    .social-link {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    .social-link i {
+        font-size: 1.5rem !important;
+    }
+
+    .social-icons {
+        gap: 1rem !important;
+        margin: 1.5rem 0 !important;
+    }
+
     /* Footer调整 */
     footer {
         padding: 2rem 0 !important;
     }
     
+    footer .bi {
+        font-size: 1.25rem !important;
+    }
+
     footer p {
         font-size: 0.8rem;
         margin-bottom: 0.5rem;
@@ -872,6 +975,15 @@ section:has(.card) {
         display: block;
     }
     
+    /* Social links for very small screens */
+    .social-link {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .social-link i {
+        font-size: 1.3rem !important;
+    }
 }
 
 /* Print styles */
@@ -1071,6 +1183,17 @@ footer a:hover {
 .teaching-content ul li strong,
 .service-content ul li strong {
     color: #675f86;
+}
+
+.social-link {
+    background: #ffffff;
+    border: 0;
+    box-shadow: 0 8px 18px rgba(23, 33, 43, 0.04);
+}
+
+.social-link:hover {
+    color: var(--zm-accent-warm) !important;
+    box-shadow: 0 10px 24px rgba(114, 95, 143, 0.11) !important;
 }
 
 .btn-outline-primary {

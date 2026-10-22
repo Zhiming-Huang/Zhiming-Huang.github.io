@@ -84,7 +84,7 @@ Publications:
     status: "Published"
     links:
       - text: "IEEE"
-        url: "https://doi.org/10.1109/INFOCOM.2025.example"
+        url: "https://doi.org/10.1109/INFOCOM55648.2025.11044606"
         type: "publisher"
       - text: "Extended PDF"
         url: "SwapRegret_Acc.pdf"
@@ -101,8 +101,9 @@ Publications:
     type: "conference"
     status: "Published"
     links:
-      - text: "PDF"
-        url: "https://example.com/paper3.pdf"
+      - text: "IEEE"
+        url: "https://doi.org/10.1109/INFOCOM55648.2025.11044659"
+        type: "publisher"
   
 
   - title: "Gaussian Randomized Exploration for Semi-bandits with Sleeping Arms"
@@ -142,7 +143,7 @@ Publications:
     status: "Published"
     links:
       - text: "IEEE"
-        url: "https://ieeexplore.ieee.org/document/10645817"
+        url: "https://doi.org/10.1109/TPDS.2024.3390109"
   
   - title: "Distributed Learning of Unknown Games for HetNet Selection"
     authors: "**Zhiming Huang**, Jianping Pan"
@@ -226,8 +227,8 @@ Publications:
     type: "journal"
     status: "Published"
     links:
-      - text: "PDF"
-        url: "https://journals.sagepub.com/doi/10.3233/JCS-191416"
+      - text: "Publisher"
+        url: "https://doi.org/10.3233/JCS-191416"
 
   - title: "A Framework of Multipath Clustering Based on Space-Transformed Fuzzy c-Means and Data Fusion for Radio Channel Modeling"
     authors: "**Zhiming Huang**, Ruonan Zhang, Jianping Pan, Yi Jiang, Daosen Zhai"

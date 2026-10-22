@@ -105,7 +105,7 @@
     "links": [
       {
         "text": "IEEE",
-        "url": "https://doi.org/10.1109/INFOCOM.2025.example",
+        "url": "https://doi.org/10.1109/INFOCOM55648.2025.11044606",
         "type": "publisher"
       },
       {
@@ -130,8 +130,9 @@
     "status": "Published",
     "links": [
       {
-        "text": "PDF",
-        "url": "https://example.com/paper3.pdf"
+        "text": "IEEE",
+        "url": "https://doi.org/10.1109/INFOCOM55648.2025.11044659",
+        "type": "publisher"
       }
     ]
   },
@@ -184,7 +185,7 @@
     "links": [
       {
         "text": "IEEE",
-        "url": "https://ieeexplore.ieee.org/document/10645817"
+        "url": "https://doi.org/10.1109/TPDS.2024.3390109"
       }
     ]
   },
@@ -302,8 +303,8 @@
     "status": "Published",
     "links": [
       {
-        "text": "PDF",
-        "url": "https://journals.sagepub.com/doi/10.3233/JCS-191416"
+        "text": "Publisher",
+        "url": "https://doi.org/10.3233/JCS-191416"
       }
     ]
   },
