@@ -86,7 +86,6 @@
                     <div class="row align-items-start">
                         <!-- Left Column: Profile Image and Info -->
                         <div class="col-lg-5 text-center mb-4 mb-lg-0">
-                            <!-- Profile Image -->
                             {% if article.profile_image %}
                             <div class="mb-4">
                                 <img src="{{ SITEURL }}/images/{{ article.profile_image }}" 
@@ -99,7 +98,6 @@
                             </div>
                             {% endif %}
                             
-                            <!-- Name and Position -->
                             {% if article.full_name %}
                             <h1 class="h3 fw-bold mb-2">{{ article.full_name }}</h1>
                             {% else %}
@@ -111,8 +109,6 @@
                             {% else %}
                             <h2 class="h5 text-muted mb-4 fw-normal">{{ ACADEMIC_TITLE }}, {{ ACADEMIC_POSITION }}</h2>
                             {% endif %}
-                            
-
                         </div>
                         
                         <!-- Right Column: About Content -->
@@ -120,58 +116,13 @@
                             <article class="page-content">
                                 {{ article.content }}
                             </article>
-                            
-                            <!-- Social Links moved here -->
-                            <div class="d-flex justify-content-center gap-4 social-icons mt-4">
-                                {% if article.google_scholar %}
-                                <a href="{{ article.google_scholar }}" 
-                                   class="social-link text-muted" 
-                                   target="_blank" 
-                                   rel="noopener"
-                                   title="Google Scholar"
-                                   data-bs-toggle="tooltip">
-                                    <i class="bi bi-mortarboard fs-2"></i>
-                                </a>
-                                {% endif %}
-                                
-                                {% if article.github %}
-                                <a href="{{ article.github }}" 
-                                   class="social-link text-muted" 
-                                   target="_blank" 
-                                   rel="noopener"
-                                   title="GitHub"
-                                   data-bs-toggle="tooltip">
-                                    <i class="bi bi-github fs-2"></i>
-                                </a>
-                                {% endif %}
-                                
-                                {% if article.linkedin %}
-                                <a href="{{ article.linkedin }}" 
-                                   class="social-link text-muted" 
-                                   target="_blank" 
-                                   rel="noopener"
-                                   title="LinkedIn"
-                                   data-bs-toggle="tooltip">
-                                    <i class="bi bi-linkedin fs-2"></i>
-                                </a>
-                                {% endif %}
-                                
-                                {% if article.cv %}
-                                <a href="{{ SITEURL }}/files/{{ article.cv }}" 
-                                   class="social-link text-muted" 
-                                   target="_blank" 
-                                   rel="noopener"
-                                   title="View CV"
-                                   data-bs-toggle="tooltip">
-                                    <i class="bi bi-file-earmark-person fs-2"></i>
-                                </a>
-                                {% endif %}
-                            </div>
+                            {% if article.cv %}
+                            <p class="mt-3"><a href="{{ SITEURL }}/files/{{ article.cv }}" target="_blank" rel="noopener"><i class="bi bi-file-earmark-person" aria-hidden="true"></i> CV (PDF)</a></p>
+                            {% endif %}
                         </div>
                     </div>
                     
                 {% else %}
-                    <!-- Fallback Layout -->
                     <div class="row align-items-start">
                         <div class="col-lg-5 text-center mb-4 mb-lg-0">
                             <div class="mb-4">
@@ -221,12 +172,8 @@
                             </button>
                         </div>
                         
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <div id="newsContent">
-                                    {{ article.content }}
-                                </div>
-                            </div>
+                        <div id="newsContent" class="news-list">
+                            {{ article.content }}
                         </div>
                     </div>
                 </div>

@@ -20,11 +20,10 @@ Seo_keywords: Zhiming Huang, computer science, online learning, bandit algorithm
 Google_scholar: https://scholar.google.com/citations?hl=en&user=CGFcFNUAAAAJ&view_op=list_works&sortby=pubdate
 Github: https://github.com/Zhiming-Huang
 Linkedin: https://linkedin.com/in/zhiminghuang
-CV: cv.html
+CV: cv_zm.pdf
 
 ## About
 I am a postdoctoral scholar at the Paul G. Allen School of Computer Science & Engineering, University of Washington, advised by [Prof. Jamie Morgenstern](https://jamiemorgenstern.com/).
-
 I received my PhD in Computer Science from the University of Victoria, advised by [Prof. Jianping Pan](https://webhome.cs.uvic.ca/~pan/).
 
-My research develops online learning and game-theoretic methods for decision-making under limited feedback, with applications to computer networks and adaptive systems.
+My research develops and analyzes learning algorithms for sequential decision-making under limited feedback, drawing on tools from online learning, optimization, and algorithmic game theory.

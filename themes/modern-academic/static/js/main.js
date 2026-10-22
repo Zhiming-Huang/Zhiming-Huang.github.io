@@ -211,7 +211,7 @@ function initializeNewsToggle() {
             if (index >= itemsToShow && !isExpanded) {
                 item.style.display = 'none';
             } else {
-                item.style.display = 'list-item';
+                item.style.display = '';
             }
         });
         

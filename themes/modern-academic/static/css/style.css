@@ -267,17 +267,13 @@ h1, h2, h3, h4, h5, h6,
     margin: 2rem 0;
 }
 
-.news-section .card {
-    border: none;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-}
-
 .news-section ul {
     margin-bottom: 0;
-    padding-left: 1.5rem;
+    padding-left: 0;
 }
 
 .news-section li {
+    list-style: none;
     margin-bottom: 0.75rem;
     line-height: 1.6;
     transition: all 0.3s ease;
@@ -416,90 +412,6 @@ section:has(.card) {
 .service-content ul li strong {
     color: var(--custom-text-heading);
     font-weight: 600;
-}
-
-/* Social links styling */
-.social-icons {
-    margin: 1.5rem 0;
-}
-
-/* Social links in About section */
-.profile-about-section .social-icons {
-    margin: 2rem 0 0 0;
-    justify-content: center !important;
-    display: flex !important;
-    flex-direction: row !important;
-    width: 100% !important;
-    clear: both;
-}
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-}
-
-.social-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, var(--custom-primary) 0%, var(--custom-text-heading) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 50%;
-    z-index: -1;
-}
-
-.social-link:hover::before {
-    opacity: 0.1;
-}
-
-.social-link:hover {
-    color: var(--custom-primary) !important;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.social-link i {
-    transition: all 0.3s ease;
-    z-index: 1;
-}
-
-.social-link:hover i {
-    transform: scale(1.1);
-}
-
-/* Specific social platform colors on hover */
-.social-link[title="Google Scholar"]:hover {
-    color: #4285f4 !important;
-}
-
-.social-link[title="GitHub"]:hover {
-    color: #333 !important;
-}
-
-.social-link[title="LinkedIn"]:hover {
-    color: #0077b5 !important;
-}
-
-/* Footer social links styling */
-footer .bi {
-    transition: all 0.3s ease;
-}
-
-footer a:hover .bi {
-    color: var(--custom-primary) !important;
-    transform: translateY(-2px);
 }
 
 /* 响应式设计 - 全面覆盖各种屏幕尺寸 */
@@ -889,28 +801,9 @@ footer a:hover .bi {
         margin-bottom: 1.5rem !important;
     }
     
-    /* Social links mobile adjustments */
-    .social-link {
-        width: 50px !important;
-        height: 50px !important;
-    }
-    
-    .social-link i {
-        font-size: 1.5rem !important;
-    }
-    
-    .social-icons {
-        gap: 1rem !important;
-        margin: 1.5rem 0 !important;
-    }
-    
     /* Footer调整 */
     footer {
         padding: 2rem 0 !important;
-    }
-    
-    footer .bi {
-        font-size: 1.25rem !important;
     }
     
     footer p {
@@ -979,15 +872,6 @@ footer a:hover .bi {
         display: block;
     }
     
-    /* Social links for very small screens */
-    .social-link {
-        width: 45px !important;
-        height: 45px !important;
-    }
-    
-    .social-link i {
-        font-size: 1.3rem !important;
-    }
 }
 
 /* Print styles */
@@ -1080,7 +964,6 @@ footer a:hover {
 
 .navbar,
 .profile-about-section .page-content,
-.news-section .card,
 .card,
 .search-overlay,
 .modal-content {
@@ -1190,17 +1073,6 @@ footer a:hover {
     color: #675f86;
 }
 
-.social-link {
-    background: #ffffff;
-    border: 0;
-    box-shadow: 0 8px 18px rgba(23, 33, 43, 0.04);
-}
-
-.social-link:hover {
-    color: var(--zm-accent-warm) !important;
-    box-shadow: 0 10px 24px rgba(114, 95, 143, 0.11) !important;
-}
-
 .btn-outline-primary {
     background: rgba(40, 103, 114, 0.07);
     border: 0 !important;
@@ -1235,13 +1107,25 @@ footer a:hover {
     color: var(--custom-text-heading) !important;
 }
 
-.news-section .card {
-    box-shadow: 0 8px 22px rgba(23, 33, 43, 0.035) !important;
-}
-
+.news-list ul,
 .recent-publications-list {
     display: grid;
     gap: 1.05rem;
+}
+
+.news-list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.news-list li {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    display: block;
+    line-height: 1.48;
+    margin: 0;
+    padding: 0.25rem 0 0.45rem;
 }
 
 .recent-publication-item {
