@@ -182,39 +182,8 @@
     margin: 16px 0 24px;
 }
 
-.home .news-window {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #e3e9ee;
-    border-radius: 14px;
-    background: #fff;
-}
-
-.home .news-window.has-more::after {
-    content: '';
-    position: absolute;
-    inset: auto 0 0;
-    height: 54px;
-    background: linear-gradient(transparent, #fff);
-    pointer-events: none;
-}
-
 .home .news-list {
-    max-height: 360px;
-    overflow-y: auto;
-    padding: 22px 26px 32px;
-    scrollbar-width: thin;
-    scrollbar-color: #c8d3dc transparent;
-}
-
-.home .news-list:focus-visible {
-    outline: 2px solid var(--zm-link);
-    outline-offset: -3px;
-}
-
-.home .news-window.is-expanded .news-list {
-    max-height: none;
-    overflow: visible;
+    padding-top: 8px;
 }
 
 .home .news-list ul {
@@ -226,6 +195,10 @@
     font-size: 0.9rem;
     line-height: 1.7;
     padding: 0 0 0 94px;
+}
+
+.home .news-list.is-collapsed > ul > li:nth-child(n + 5) {
+    display: none;
 }
 
 .home .news-list time {
@@ -241,6 +214,32 @@
 .home .news-section strong {
     color: #465b6f;
     font-weight: 600;
+}
+
+.home #toggleNewsBtn {
+    margin: 8px 0 0 94px;
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--zm-link);
+    font-family: inherit;
+    font-size: 0.82rem;
+    cursor: pointer;
+}
+
+.home #toggleNewsBtn:hover {
+    color: var(--zm-link-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transform: none;
+    box-shadow: none;
+}
+
+.home #toggleNewsBtn:focus-visible {
+    outline: 2px solid var(--zm-link);
+    outline-offset: 3px;
 }
 
 .home .btn-outline-primary {
@@ -361,13 +360,12 @@
         justify-content: flex-start;
     }
 
-    .home .news-list {
-        max-height: 390px;
-        padding: 18px 16px 30px;
-    }
-
     .home .news-list li {
         padding-left: 76px;
+    }
+
+    .home #toggleNewsBtn {
+        margin-left: 76px;
     }
 
     .home .news-list time {

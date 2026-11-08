@@ -193,27 +193,20 @@ function initializeNewsToggle() {
     
     if (!newsContent || !toggleBtn) return;
     
-    const newsWindow = newsContent.closest('.news-window');
-    if (!newsWindow) return;
-
-    function updateNewsFade() {
-        const hasMore = newsContent.scrollTop + newsContent.clientHeight < newsContent.scrollHeight - 1;
-        newsWindow.classList.toggle('has-more', hasMore);
+    if (newsContent.querySelectorAll('ul > li').length <= 4) {
+        toggleBtn.hidden = true;
+        return;
     }
+
+    newsContent.classList.add('is-collapsed');
 
     toggleBtn.addEventListener('click', function() {
         const isExpanded = toggleBtn.getAttribute('aria-expanded') !== 'true';
         toggleBtn.setAttribute('aria-expanded', String(isExpanded));
-        newsWindow.classList.toggle('is-expanded', isExpanded);
-        toggleText.textContent = isExpanded ? 'Show Less' : 'Show All';
+        newsContent.classList.toggle('is-collapsed', !isExpanded);
+        toggleText.textContent = isExpanded ? 'Less' : 'More';
         toggleIcon.className = isExpanded ? 'bi bi-chevron-up ms-1' : 'bi bi-chevron-down ms-1';
-        newsContent.scrollTop = 0;
-        updateNewsFade();
     });
-
-    newsContent.addEventListener('scroll', updateNewsFade, { passive: true });
-    new ResizeObserver(updateNewsFade).observe(newsContent);
-    updateNewsFade();
 }
 
 // Additional utility functions for enhanced UX
