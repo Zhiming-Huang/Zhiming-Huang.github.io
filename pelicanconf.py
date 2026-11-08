@@ -1,4 +1,6 @@
 from datetime import date
+from hashlib import sha256
+from pathlib import Path
 
 AUTHOR = 'Zhiming Huang'
 SITENAME = "Zhiming's Page"
@@ -37,6 +39,10 @@ AUTHOR_FEED_RSS = None
 
 # Theme settings
 THEME = 'themes/modern-academic'
+ASSET_VERSION = sha256(b''.join(
+    (Path(__file__).parent / THEME / 'static' / asset).read_bytes()
+    for asset in ('css/style.css', 'css/home-minimal.css', 'js/main.js')
+)).hexdigest()[:12]
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = False
 
