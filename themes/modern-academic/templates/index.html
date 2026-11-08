@@ -4,6 +4,10 @@
 
 {% block body_class %}home{% endblock %}
 
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/home-minimal.css">
+{% endblock %}
+
 {% block content %}
 {% set profile = articles[0] if articles else none %}
 {% set profile_name = profile.full_name if profile and profile.full_name else AUTHOR %}
@@ -127,7 +131,8 @@
                                    aria-label="Google Scholar"
                                    title="Google Scholar"
                                    data-bs-toggle="tooltip">
-                                    <i class="bi bi-mortarboard fs-2"></i>
+                                    <i class="bi bi-mortarboard fs-2" aria-hidden="true"></i>
+                                    <span>Google Scholar</span>
                                 </a>
                                 {% endif %}
 
@@ -139,7 +144,8 @@
                                    aria-label="GitHub"
                                    title="GitHub"
                                    data-bs-toggle="tooltip">
-                                    <i class="bi bi-github fs-2"></i>
+                                    <i class="bi bi-github fs-2" aria-hidden="true"></i>
+                                    <span>GitHub</span>
                                 </a>
                                 {% endif %}
 
@@ -151,7 +157,8 @@
                                    aria-label="LinkedIn"
                                    title="LinkedIn"
                                    data-bs-toggle="tooltip">
-                                    <i class="bi bi-linkedin fs-2"></i>
+                                    <i class="bi bi-linkedin fs-2" aria-hidden="true"></i>
+                                    <span>LinkedIn</span>
                                 </a>
                                 {% endif %}
 
@@ -163,7 +170,8 @@
                                    aria-label="View CV"
                                    title="View CV"
                                    data-bs-toggle="tooltip">
-                                    <i class="bi bi-file-earmark-person fs-2"></i>
+                                    <i class="bi bi-file-earmark-person fs-2" aria-hidden="true"></i>
+                                    <span>CV</span>
                                 </a>
                                 {% endif %}
                             </div>
@@ -214,15 +222,17 @@
                 <div class="col-lg-12 col-xl-10">
                     <div class="news-section">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h2 class="h3 fw-semibold text-primary mb-0">Recent Activity</h2>
-                            <button class="btn btn-outline-primary btn-sm" id="toggleNewsBtn">
+                            <h2 class="h3 fw-semibold text-primary mb-0" id="newsHeading">Recent Activity</h2>
+                            <button class="btn btn-outline-primary btn-sm" id="toggleNewsBtn" aria-controls="newsContent" aria-expanded="false">
                                 <span id="toggleNewsText">Show All</span>
                                 <i class="bi bi-chevron-down ms-1" id="toggleNewsIcon"></i>
                             </button>
                         </div>
                         
-                        <div id="newsContent" class="news-list">
-                            {{ article.content }}
+                        <div class="news-window">
+                            <div id="newsContent" class="news-list" tabindex="0" role="region" aria-labelledby="newsHeading">
+                                {{ article.content }}
+                            </div>
                         </div>
                     </div>
                 </div>

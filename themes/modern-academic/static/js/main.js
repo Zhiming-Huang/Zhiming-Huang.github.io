@@ -121,10 +121,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Bootstrap navbar collapse for mobile
     if (navbarToggler && navbarCollapse) {
-        navbarToggler.addEventListener('click', function() {
-            navbarCollapse.classList.toggle('show');
-        });
-        
         // Close mobile menu when clicking nav links
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
@@ -197,58 +193,27 @@ function initializeNewsToggle() {
     
     if (!newsContent || !toggleBtn) return;
     
-    // Find all news items (li elements)
-    const newsItems = newsContent.querySelectorAll('ul li');
-    
-    if (newsItems.length === 0) return;
-    
-    let isExpanded = false;
-    const itemsToShow = 4;
-    
-    // Initially hide items beyond the first four
-    function updateNewsDisplay() {
-        newsItems.forEach((item, index) => {
-            if (index >= itemsToShow && !isExpanded) {
-                item.style.display = 'none';
-            } else {
-                item.style.display = '';
-            }
-        });
-        
-        // Update button text and icon
-        if (isExpanded) {
-            toggleText.textContent = 'Show Less';
-            toggleIcon.className = 'bi bi-chevron-up ms-1';
-        } else {
-            toggleText.textContent = 'Show All';
-            toggleIcon.className = 'bi bi-chevron-down ms-1';
-        }
-        
-        // Hide button if there are four or fewer items
-        if (newsItems.length <= itemsToShow) {
-            toggleBtn.style.display = 'none';
-        }
+    const newsWindow = newsContent.closest('.news-window');
+    if (!newsWindow) return;
+
+    function updateNewsFade() {
+        const hasMore = newsContent.scrollTop + newsContent.clientHeight < newsContent.scrollHeight - 1;
+        newsWindow.classList.toggle('has-more', hasMore);
     }
-    
-    // Add click event to toggle button
-    toggleBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        isExpanded = !isExpanded;
-        updateNewsDisplay();
-        
-        // Smooth scroll to news section when expanding
-        if (isExpanded) {
-            setTimeout(() => {
-                newsContent.scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'start' 
-                });
-            }, 100);
-        }
+
+    toggleBtn.addEventListener('click', function() {
+        const isExpanded = toggleBtn.getAttribute('aria-expanded') !== 'true';
+        toggleBtn.setAttribute('aria-expanded', String(isExpanded));
+        newsWindow.classList.toggle('is-expanded', isExpanded);
+        toggleText.textContent = isExpanded ? 'Show Less' : 'Show All';
+        toggleIcon.className = isExpanded ? 'bi bi-chevron-up ms-1' : 'bi bi-chevron-down ms-1';
+        newsContent.scrollTop = 0;
+        updateNewsFade();
     });
-    
-    // Initialize display
-    updateNewsDisplay();
+
+    newsContent.addEventListener('scroll', updateNewsFade, { passive: true });
+    new ResizeObserver(updateNewsFade).observe(newsContent);
+    updateNewsFade();
 }
 
 // Additional utility functions for enhanced UX

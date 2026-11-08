@@ -54,6 +54,7 @@
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
+    {% block extra_styles %}{% endblock %}
     
     <!-- Open Graph / Social Media SEO -->
     {% if article %}
