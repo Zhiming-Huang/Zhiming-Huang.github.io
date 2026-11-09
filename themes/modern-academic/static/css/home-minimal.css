@@ -1,5 +1,5 @@
-/* Homepage presentation, independent of the publication and CV layouts. */
-.home {
+/* Minimal presentation shared by the homepage and publications. */
+:is(.home, .page-publications) {
     --custom-text-heading: #20344a;
     --zm-ink: #20344a;
     --zm-text: #344352;
@@ -11,32 +11,32 @@
     font-size: 15.5px;
 }
 
-.home .navbar,
-.home .navbar.scrolled {
+:is(.home, .page-publications) .navbar,
+:is(.home, .page-publications) .navbar.scrolled {
     box-shadow: none !important;
     border-bottom: 1px solid #edf0f3 !important;
 }
 
-.home .navbar > .container-fluid,
-.home #main-content > .container-fluid {
+:is(.home, .page-publications) .navbar > .container-fluid,
+:is(.home, .page-publications) #main-content > .container-fluid {
     max-width: 980px;
     margin-inline: auto;
     padding-inline: 32px !important;
 }
 
-.home .navbar-brand {
+:is(.home, .page-publications) .navbar-brand {
     color: var(--zm-ink) !important;
     font-size: 1rem;
     font-weight: 600 !important;
     letter-spacing: -0.02em;
 }
 
-.home .navbar-nav .nav-link {
+:is(.home, .page-publications) .navbar-nav .nav-link {
     font-size: 0.71rem !important;
     letter-spacing: 0.07em !important;
 }
 
-.home #main-content > .container-fluid > .container-xl {
+:is(.home, .page-publications) #main-content > .container-fluid > .container-xl {
     max-width: none;
     padding-inline: 0;
 }
@@ -242,7 +242,7 @@
     outline-offset: 3px;
 }
 
-.home .btn-outline-primary {
+:is(.home, .page-publications) .btn-outline-primary {
     color: var(--zm-link);
     background: transparent;
     border: 1px solid #dce4ea !important;
@@ -292,14 +292,14 @@
     text-underline-offset: 3px;
 }
 
-.home footer {
+:is(.home, .page-publications) footer {
     margin-top: 24px !important;
     padding-block: 24px !important;
 }
 
 @media (max-width: 767px) {
-    .home .navbar > .container-fluid,
-    .home #main-content > .container-fluid {
+    :is(.home, .page-publications) .navbar > .container-fluid,
+    :is(.home, .page-publications) #main-content > .container-fluid {
         padding-inline: 22px !important;
     }
 
