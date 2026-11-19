@@ -32,6 +32,12 @@
     <meta name="DC.description" content="{{ site_description }}">
     
     <title>{% block title %}{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}{% endblock %}</title>
+
+    {% if UMAMI_WEBSITE_ID %}
+    <script defer src="https://cloud.umami.is/script.js"
+        data-website-id="{{ UMAMI_WEBSITE_ID|e }}"
+        data-domains="zhiminghuang.me"></script>
+    {% endif %}
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="{{ SITEURL }}/images/{{ site_profile_image }}">

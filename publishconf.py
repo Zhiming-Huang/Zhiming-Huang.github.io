@@ -20,4 +20,4 @@ CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 # Following items are often useful when publishing
 
 # DISQUS_SITENAME = ""
-# GOOGLE_ANALYTICS = ""
+UMAMI_WEBSITE_ID = "f2fc9603-a7d1-4340-bf66-d9bfc4831bb7"
